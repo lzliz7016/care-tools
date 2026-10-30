@@ -3,10 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="data:image/png;base64,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">
+  <link rel="icon" href="data:image/png;base64,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">
   <title>居服中心整合作業平台</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
   <!-- SheetJS CDN -->
   <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+  <!-- ExcelJS CDN (用於高保真保留班表結構、上色與插入歸檔欄位) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/exceljs/4.3.0/exceljs.min.js"></script>
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
   <style>
     :root {
       --primary: #1e3a8a;
@@ -27,7 +35,7 @@
       padding: 24px;
       line-height: 1.5;
     }
-    .container { max-width: 1240px; margin: 0 auto; }
+    .container { max-width: 1280px; margin: 0 auto; }
     header {
       background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
       color: white;
@@ -223,7 +231,7 @@
     .copy-content { font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace; font-size: 13px; line-height: 1.7; white-space: pre-wrap; color: #1e293b; min-height: 24px; }
     .empty-text { color: #94a3b8; font-style: italic; font-size: 12px; }
 
-    #loading, #loadingSalary { display: none; text-align: center; padding: 28px; color: var(--primary); font-weight: 600; }
+    #loading { display: none; text-align: center; padding: 28px; color: var(--primary); font-weight: 600; }
     .toast {
       position: fixed;
       bottom: 24px;
@@ -236,6 +244,13 @@
       display: none;
       z-index: 10000;
       font-size: 13.5px;
+    }
+
+    /* 薪資模組自訂高亮樣式 */
+    .has-cert-bg {
+      background-color: #fef08a !important;
+      color: #854d0e !important;
+      font-weight: 700;
     }
 
     /* 登入視窗與免責聲明整合設計 */
@@ -289,7 +304,6 @@
     .auth-btn:hover { background: #1d4ed8; }
     .auth-error { color: #ef4444; font-size: 13px; margin-bottom: 10px; text-align: center; display: none; }
 
-    /* 登入視窗內的免責條款區塊 */
     .login-disclaimer-box {
       background: #fff1f2;
       border: 1px solid #fecdd3;
@@ -323,7 +337,6 @@
     <div class="auth-title">居服管理系統 · 督導身份驗證</div>
     <div class="auth-desc">請輸入您的督導專屬密碼登入（每次登入有效時效為 30 分鐘）</div>
     
-    <!-- 登入時顯示的免責聲明 -->
     <div class="login-disclaimer-box">
       <strong>⚖️【系統使用免責聲明與個人著作權宣告】</strong><br>
       1. <strong>非職務指派與無償自發性研發</strong>：本系統全數功能及計算模組係由員工個人公餘時間自發性研發，非屬機構指派之職務業務項目，機構未曾支付任何開發報酬或委任酬勞。<br>
@@ -360,67 +373,248 @@
     <button class="tab-btn" onclick="switchMainTab('supervisorRecordModule')">📑 督導紀錄內容</button>
   </div>
 
-  <!-- ================= 模組一：薪資計算系統 ================= -->
-  <div id="salaryModule" class="module-section active">
-    <div class="grid-2">
-      <div class="card">
-        <h3>📁 1. 當月服務紀錄總表 (.xlsx)</h3>
-        <div class="file-dropzone" onclick="document.getElementById('fileSalarySvc').click()">
-          <input type="file" id="fileSalarySvc" accept=".xlsx, .xls" onchange="updateFileLabel('fileSalarySvc', 'fileSalarySvc_name')">
-          <label id="labelSalarySvc">點擊選擇檔案 或 將服務紀錄總表拖曳至此</label>
-          <div id="fileSalarySvc_name" class="file-name"></div>
+  <!-- ================= 模組一：薪資計算系統 (已完全整合居服員班表工時核算) ================= -->
+  <div id="salaryModule" class="module-section active space-y-6">
+
+    <!-- 頂部操作按鈕列 -->
+    <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-5 flex flex-col md:flex-row md:items-center justify-between gap-4">
+      <div>
+        <h2 class="text-xl font-bold text-slate-800 flex items-center gap-2">
+          <i class="fa-solid fa-calculator text-teal-600"></i>
+          居服員班表薪資與工時核算系統
+        </h2>
+        <p class="text-xs md:text-sm text-slate-500 mt-0.5">匯入班表自動扣除國假轉場、拆解平日與休息日加班、滿120小時核算丙照費、三段自訂排休與超時預警</p>
+      </div>
+
+      <div class="flex flex-wrap items-center gap-2">
+        <label class="cursor-pointer bg-teal-600 hover:bg-teal-700 text-white font-medium px-4 py-2.5 rounded-xl shadow transition flex items-center gap-2 text-sm">
+          <i class="fa-solid fa-file-excel"></i>
+          <span>匯入班表 Excel (.xlsx)</span>
+          <input type="file" id="excelFileInput" accept=".xlsx, .xls" class="hidden">
+        </label>
+        
+        <button onclick="downloadArchivedScheduleExcel()" class="bg-indigo-600 hover:bg-indigo-700 text-white font-medium px-4 py-2.5 rounded-xl shadow transition flex items-center gap-2 text-sm" title="保留原始班表格式，在每位居服員分頁日曆下方自動插入歸檔欄位，並將休息日(黃)與國假(淡橘)整格上色">
+          <i class="fa-solid fa-file-circle-check"></i>
+          <span>下載回填歸檔班表 (.xlsx)</span>
+        </button>
+
+        <button onclick="exportResultExcel()" class="bg-emerald-600 hover:bg-emerald-700 text-white font-medium px-3.5 py-2.5 rounded-xl shadow transition flex items-center gap-2 text-sm">
+          <i class="fa-solid fa-download"></i>
+          <span>匯出薪資總表</span>
+        </button>
+        <button onclick="window.print()" class="bg-slate-700 hover:bg-slate-800 text-white font-medium px-3 py-2.5 rounded-xl shadow transition flex items-center gap-2 text-sm">
+          <i class="fa-solid fa-print"></i>
+          <span>列印</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- 國定假日手動輸入與設定控制區 (日期從小到大排) -->
+    <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-4 md:p-5">
+      <div class="flex flex-col md:flex-row md:items-center justify-between gap-3 pb-3 border-b border-slate-100">
+        <div class="flex items-center gap-2.5">
+          <div class="w-8 h-8 rounded-lg bg-rose-100 text-rose-600 flex items-center justify-center font-bold text-sm">
+            <i class="fa-solid fa-calendar-plus"></i>
+          </div>
+          <div>
+            <h3 class="font-bold text-slate-800 text-sm md:text-base">當月國定假日管理（扣除轉場工時並合併核算）</h3>
+            <p class="text-xs text-slate-500">國假自動由小到大排序，並自動於右下角扣除轉場工時，排班＋轉場完整計入國假薪資時數</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-2 text-xs">
+          <span class="text-slate-500">薪資年月：</span>
+          <input type="month" id="currentYearMonthInput" value="2026-10" onchange="onMonthChange(this.value)" class="border border-slate-300 rounded-lg px-2.5 py-1 text-slate-700 font-medium focus:ring-2 focus:ring-teal-500 focus:outline-none">
         </div>
       </div>
-      <div class="card">
-        <h3>📁 2. 員工班表檔案 (.xlsx)</h3>
-        <div class="file-dropzone" onclick="document.getElementById('fileRoster').click()">
-          <input type="file" id="fileRoster" accept=".xlsx, .xls" onchange="updateFileLabel('fileRoster', 'fileRoster_name')">
-          <label id="labelRoster">點擊選擇檔案 或 將員工班表拖曳至此</label>
-          <div id="fileRoster_name" class="file-name"></div>
+
+      <div class="mt-4 flex flex-col md:flex-row md:items-center gap-3">
+        <div class="flex items-center gap-2">
+          <input type="date" id="newHolidayDateInput" value="2026-10-26" class="border border-slate-300 rounded-lg px-3 py-1.5 text-xs md:text-sm text-slate-700 focus:ring-2 focus:ring-teal-500 focus:outline-none">
+          <input type="text" id="newHolidayNoteInput" placeholder="假日名稱 (如：光復節補假)" value="光復節補假" class="border border-slate-300 rounded-lg px-3 py-1.5 text-xs md:text-sm text-slate-700 w-44 focus:ring-2 focus:ring-teal-500 focus:outline-none">
+          <button onclick="addHoliday()" class="bg-rose-600 hover:bg-rose-700 text-white text-xs md:text-sm px-3.5 py-1.5 rounded-lg shadow-sm font-medium transition flex items-center gap-1.5 whitespace-nowrap">
+            <i class="fa-solid fa-plus"></i>
+            <span>新增國假</span>
+          </button>
+        </div>
+
+        <div class="flex-1 flex flex-wrap items-center gap-2 pt-2 md:pt-0">
+          <span class="text-xs text-slate-400 font-medium mr-1" id="holidayCountTag">當前國假：</span>
+          <div id="holidayBadgesContainer" class="flex flex-wrap gap-2"></div>
         </div>
       </div>
     </div>
 
-    <div class="filter-bar">
-      <div class="filter-group">
-        <span style="font-weight: 600;">計薪標準：</span>
-        <span style="color: #64748b; font-size: 13px;">底薪 $200/時、加班 1.34x($268) / 1.67x($334)、轉場 $196/時、工時加給、全勤與績效</span>
+    <!-- 1. 核心薪資時數統計總表 (職編由數字小到大排) -->
+    <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
+      <div class="p-4 md:p-5 border-b border-slate-200 flex flex-col md:flex-row md:items-center justify-between gap-3 bg-slate-50/50">
+        <div>
+          <h2 class="text-lg font-bold text-slate-800 flex items-center gap-2">
+            <i class="fa-solid fa-table-list text-teal-600"></i>
+            居服員薪資時數統計總表
+          </h2>
+          <p class="text-xs text-slate-500 mt-0.5">名冊依職編由小到大自動排序。點擊姓名可切換「丙照資格」；點擊「排休/明細」可三段自訂假別（平日 ➔ 休息日 ➔ 例假日 ➔ 平日）。</p>
+        </div>
+        <div class="flex items-center gap-2 text-xs font-semibold text-slate-600">
+          <span>顯示總人數：<span id="totalStaffCount" class="text-teal-700 font-mono text-sm">0</span> 人</span>
+        </div>
       </div>
-      <div style="display: flex; gap: 10px;">
-        <button class="btn-primary" onclick="processSalaryData()">⚡ 計算全體薪資</button>
-        <button class="btn-success" onclick="exportSalaryExcel()">📥 匯出薪資總表</button>
-      </div>
-    </div>
 
-    <div id="loadingSalary">正在計算工時、加班費與應發實領金額，請稍候...</div>
-
-    <div id="salaryResultContainer" style="display: none;">
-      <div class="section-title">
-        <span>💰 居服員薪資與工時核算彙總表</span>
-        <button class="btn-copy" onclick="copySalaryTableText()">複製薪資表文字</button>
-      </div>
-      <div class="table-responsive">
-        <table id="salaryTable">
+      <div class="overflow-x-auto">
+        <table class="w-full text-center border-collapse text-xs md:text-sm" id="payrollSummaryTable">
           <thead>
-            <tr>
-              <th>職編</th>
-              <th>居服員</th>
-              <th>總工時</th>
-              <th>正常工時</th>
-              <th>底薪(200)</th>
-              <th>1.34x加班費</th>
-              <th>1.67x加班費</th>
-              <th>週末加給</th>
-              <th>工時加給</th>
-              <th>轉場費</th>
-              <th>應發合計</th>
-              <th>實領金額</th>
+            <tr class="bg-slate-100 text-slate-700 border-b border-slate-300 font-bold tracking-tight">
+              <th class="py-3 px-2 whitespace-nowrap border-r border-slate-200">薪資年月</th>
+              <th class="py-3 px-2 whitespace-nowrap border-r border-slate-200 text-teal-800 font-bold" title="已自動由小到大排序">
+                職編 <i class="fa-solid fa-arrow-down-1-9 text-xs"></i>
+              </th>
+              <th class="py-3 px-3 whitespace-nowrap border-r border-slate-200 cursor-pointer hover:bg-slate-200" title="點擊表頭說明：點擊下方居服員名字可反黃切換丙照">
+                居服員名 <i class="fa-solid fa-hand-pointer text-slate-400 text-xs ml-0.5"></i>
+              </th>
+              <th class="py-3 px-2 whitespace-nowrap border-r border-slate-200 bg-sky-50/50">
+                班表總時數<br><span class="text-[10px] text-slate-500 font-normal">(預排總時數)</span>
+              </th>
+              <th class="py-3 px-2 whitespace-nowrap border-r border-slate-200 bg-cyan-100/70 text-cyan-900">
+                班表-右下角<br>轉場總時數<span class="text-[10px] block font-normal text-cyan-800">(扣國假轉場)</span>
+              </th>
+              <th class="py-3 px-2 whitespace-nowrap border-r border-slate-200 text-rose-600 bg-rose-50/30">
+                丙照費<br><span class="text-[10px] font-normal text-slate-500">滿120時給1000元</span>
+              </th>
+              <th class="py-3 px-2 whitespace-nowrap border-r border-slate-200 text-purple-700 bg-purple-50/30">
+                平日加班<br><span class="text-[10px] font-normal text-slate-500">(第8-10小時) 1.34倍</span>
+              </th>
+              <th class="py-3 px-2 whitespace-nowrap border-r border-slate-200 text-purple-700 bg-purple-50/30">
+                休息日加班<br><span class="text-[10px] font-normal text-slate-500">(第1-2小時) 1.34倍</span>
+              </th>
+              <th class="py-3 px-2 whitespace-nowrap border-r border-slate-200 text-purple-700 bg-purple-50/30">
+                休息日加班<br><span class="text-[10px] font-normal text-slate-500">(第3-8小時) 1.67倍</span>
+              </th>
+              <th class="py-3 px-2 whitespace-nowrap border-r border-slate-200 text-indigo-700">
+                週六時數<br><span class="text-[10px] font-normal text-slate-500">(20元)</span>
+              </th>
+              <th class="py-3 px-2 whitespace-nowrap border-r border-slate-200 text-indigo-700">
+                週日時數<br><span class="text-[10px] font-normal text-slate-500">(50元)</span>
+              </th>
+              <th class="py-3 px-2 whitespace-nowrap border-r border-slate-200 text-rose-700 bg-rose-100/50 font-bold" id="holidayColHeader">
+                國假時數<br><span class="text-[10px] font-normal text-rose-800">(排班+轉場)</span>
+              </th>
+              <th class="py-3 px-2 whitespace-nowrap no-print">排休自訂 / 明細</th>
             </tr>
           </thead>
-          <tbody id="salaryTbody"></tbody>
+          <tbody id="payrollTableBody" class="divide-y divide-slate-200 font-mono"></tbody>
+        </table>
+      </div>
+      
+      <div class="p-3 bg-slate-50 border-t border-slate-200 text-xs text-slate-500 flex flex-wrap justify-between items-center gap-2 font-sans">
+        <div>
+          <span class="inline-block w-3 h-3 bg-yellow-200 border border-yellow-400 rounded-sm mr-1 align-middle"></span> 姓名反黃：已勾選丙照且滿 120 小時發放 1,000 元
+        </div>
+        <div class="text-slate-400">系統精算公式符合勞動基準法第24條、第36條及長照特約給付規範</div>
+      </div>
+    </div>
+
+    <!-- 居服員排休設定 & 每日班表對帳抽屜 (三段循環切換) -->
+    <div id="staffDetailModal" class="bg-white rounded-2xl shadow-sm border border-slate-200 p-5 transition-all">
+      <div class="flex flex-col md:flex-row md:items-center justify-between pb-4 border-b border-slate-200 gap-3">
+        <div class="flex items-center gap-3">
+          <div class="w-9 h-9 rounded-lg bg-indigo-100 text-indigo-700 flex items-center justify-center font-bold">
+            <i class="fa-solid fa-calendar-day"></i>
+          </div>
+          <div>
+            <h3 class="font-bold text-slate-800 text-base" id="detailStaffTitle">居服員個人每日排班明細核算</h3>
+            <p class="text-xs text-slate-500">點擊下方「日期性質」按鈕可循環切換：平日上班 ➔ 休息日 ➔ 例假日 ➔ 平日上班</p>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap items-center gap-2 bg-slate-100 p-2 rounded-xl text-xs">
+          <span class="font-bold text-slate-700">預設固定休息日：</span>
+          <select id="detailRestDaySelect" onchange="onStaffRestDayTypeChange(this.value)" class="bg-white border border-slate-300 rounded px-2 py-1 font-medium text-slate-800">
+            <option value="none">無固定 (手動自訂)</option>
+            <option value="0">每週日</option>
+            <option value="6" selected>每週六</option>
+            <option value="1">每週一</option>
+            <option value="2">每週二</option>
+            <option value="3">每週三</option>
+            <option value="4">每週四</option>
+            <option value="5">每週五</option>
+          </select>
+          <span class="font-bold text-slate-700 ml-2">預設固定例假：</span>
+          <select id="detailRoutineOffSelect" onchange="onStaffRoutineOffChange(this.value)" class="bg-white border border-slate-300 rounded px-2 py-1 font-medium text-slate-800">
+            <option value="0" selected>每週日</option>
+            <option value="6">每週六</option>
+            <option value="none">無固定例假</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="my-4 p-3 bg-amber-50/80 border border-amber-200 rounded-xl text-xs text-amber-900 flex flex-col md:flex-row md:items-center justify-between gap-2">
+        <div class="flex items-center gap-2">
+          <i class="fa-solid fa-arrows-rotate text-amber-600 text-sm"></i>
+          <span><b>三段快速切換說明：</b>在下方「日期性質」點擊按鈕，每點一次會依序切換為：<span class="font-bold text-slate-700">【平日上班】</span> ➔ <span class="font-bold text-amber-800">【休息日】</span> ➔ <span class="font-bold text-indigo-800">【例假日】</span> ➔ <span class="font-bold text-slate-700">【平日上班】</span>，工時即時重算！</span>
+        </div>
+      </div>
+
+      <div class="overflow-x-auto max-h-96 overflow-y-auto border border-slate-200 rounded-xl">
+        <table class="w-full text-center border-collapse text-xs" id="dailyDetailTable">
+          <thead class="bg-slate-100 text-slate-700 sticky top-0 z-10 border-b border-slate-200">
+            <tr>
+              <th class="py-2.5 px-2">日期</th>
+              <th class="py-2.5 px-2">星期</th>
+              <th class="py-2.5 px-3">日期性質 (點擊切換)</th>
+              <th class="py-2.5 px-2">排班工時 (文字)</th>
+              <th class="py-2.5 px-2">排班工時 (小時)</th>
+              <th class="py-2.5 px-2">轉場時間 (文字)</th>
+              <th class="py-2.5 px-2">轉場工時 (小時)</th>
+              <th class="py-2.5 px-2 text-purple-700">平日加班 (時)</th>
+              <th class="py-2.5 px-2 text-purple-700">休息日(1-2時)</th>
+              <th class="py-2.5 px-2 text-purple-700">休息日(3-8時)</th>
+              <th class="py-2.5 px-2 text-indigo-700">週六時數</th>
+              <th class="py-2.5 px-2 text-indigo-700">週日時數</th>
+              <th class="py-2.5 px-2 text-rose-700">國假時數(排+轉)</th>
+            </tr>
+          </thead>
+          <tbody id="dailyDetailTableBody" class="divide-y divide-slate-100 font-mono"></tbody>
         </table>
       </div>
     </div>
+
+    <!-- 2. 排班超時警示 (休息日/國假>8小時，平日>10小時：置於最下方) -->
+    <div id="overtimeAlertSection" class="bg-white rounded-2xl shadow-sm border border-rose-200 overflow-hidden">
+      <div class="p-4 bg-rose-50 border-b border-rose-200 flex flex-col md:flex-row md:items-center justify-between gap-3">
+        <div class="flex items-center gap-2.5">
+          <div class="w-8 h-8 rounded-lg bg-rose-600 text-white flex items-center justify-center font-bold text-sm shadow">
+            <i class="fa-solid fa-triangle-exclamation"></i>
+          </div>
+          <div>
+            <h2 class="text-base font-bold text-rose-900 flex items-center gap-2">
+              排班超時警示清單 (休息日／國假 &gt; 8小時，平日 &gt; 10小時)
+              <span id="overtimeBadgeCount" class="bg-rose-600 text-white text-xs px-2 py-0.5 rounded-full font-mono">0 件</span>
+            </h2>
+            <p class="text-xs text-rose-700 mt-0.5">系統自動檢核：① 休息日／國定假日排班＋轉場 &gt; 8小時；② 平日排班＋轉場 &gt; 10小時。匯出 Excel 時將在<b>第一個工作表 (活頁本最前頁)</b> 生成「排班超時明細」總表。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="p-4 overflow-x-auto">
+        <table class="w-full text-center border-collapse text-xs md:text-sm">
+          <thead>
+            <tr class="bg-rose-100/60 text-rose-900 border-b border-rose-200 font-semibold">
+              <th class="py-2.5 px-3 whitespace-nowrap">居服員名</th>
+              <th class="py-2.5 px-2 whitespace-nowrap">員工編號</th>
+              <th class="py-2.5 px-2 whitespace-nowrap">月份</th>
+              <th class="py-2.5 px-3 whitespace-nowrap">超時日期</th>
+              <th class="py-2.5 px-2 whitespace-nowrap">假別類型</th>
+              <th class="py-2.5 px-2 whitespace-nowrap">排班工時</th>
+              <th class="py-2.5 px-2 whitespace-nowrap">轉場工時</th>
+              <th class="py-2.5 px-3 whitespace-nowrap bg-rose-200/70 text-rose-900">當日合計工時</th>
+              <th class="py-2.5 px-2 whitespace-nowrap text-rose-700 font-bold">超出上限時數</th>
+              <th class="py-2.5 px-3 text-left">備註與說明</th>
+            </tr>
+          </thead>
+          <tbody id="overtimeAlertTableBody" class="divide-y divide-rose-100 font-mono text-slate-800"></tbody>
+        </table>
+      </div>
+    </div>
+
   </div>
 
   <!-- ================= 模組二：A 碼計算系統 ================= -->
@@ -658,7 +852,13 @@ function verifyAccessPass() {
   }
 }
 
-document.addEventListener('DOMContentLoaded', () => { checkSessionTimeout(); });
+document.addEventListener('DOMContentLoaded', () => { 
+  checkSessionTimeout(); 
+  initDefaultData();
+  renderHolidayBadges();
+  renderPayrollTable();
+});
+
 document.addEventListener('copy', (e) => {
   if (!sessionStorage.getItem('LOGIN_TIME')) {
     e.preventDefault();
@@ -666,7 +866,7 @@ document.addEventListener('copy', (e) => {
   }
 });
 
-// ================= 分頁與介面邏輯 =================
+// ================= 分頁切換邏輯 =================
 function switchMainTab(moduleId) {
   document.querySelectorAll('.module-section').forEach(m => m.classList.remove('active'));
   document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
@@ -691,7 +891,1068 @@ function toStdYMD(dateInput) {
   return str;
 }
 
+// ================= 模組一：居服員薪資與工時核算引擎 =================
+let currentPayrollMonth = "2026-10";
+let rawUploadedWorkbookArrayBuffer = null;
+let rawUploadedFileName = "員工班表.xlsx";
+
+let holidaysList = [
+  { date: "2026-10-09", note: "國定假日" },
+  { date: "2026-10-26", note: "國定假日" }
+];
+
+let activeStaffIndex = 0;
+let staffList = []; // 預設名冊清空，等待匯入
+
+function parseTimeToHours(text) {
+  if (!text) return 0;
+  if (typeof text === 'number') return Math.round(text * 100) / 100;
+  const str = String(text).trim();
+  if (!str || str === '0' || str === '-') return 0;
+
+  const matchHourMin = str.match(/(\d+)\s*(?:時|小時|:)\s*(\d+)?(?:\s*分)?/);
+  if (matchHourMin) {
+    const hours = parseInt(matchHourMin[1], 10) || 0;
+    const minutes = parseInt(matchHourMin[2], 10) || 0;
+    return Math.round((hours + minutes / 60) * 100) / 100;
+  }
+  const matchMinOnly = str.match(/^(\d+)\s*分$/);
+  if (matchMinOnly) {
+    const minutes = parseInt(matchMinOnly[1], 10) || 0;
+    return Math.round((minutes / 60) * 100) / 100;
+  }
+  const parsedFloat = parseFloat(str);
+  return isNaN(parsedFloat) ? 0 : Math.round(parsedFloat * 100) / 100;
+}
+
+function formatHoursToChinese(hours) {
+  if (!hours || hours <= 0) return "0分";
+  const totalMin = Math.round(hours * 60);
+  const h = Math.floor(totalMin / 60);
+  const m = totalMin % 60;
+  if (h === 0) return `${m}分`;
+  if (m === 0) return `${h}時`;
+  return `${h}時${m}分`;
+}
+
+function generateDaysOfMonth(yearMonthStr) {
+  const [year, month] = yearMonthStr.split('-').map(Number);
+  const daysCount = new Date(year, month, 0).getDate();
+  const list = [];
+  const weekDayNames = ["日", "一", "二", "三", "四", "五", "六"];
+
+  for (let d = 1; d <= daysCount; d++) {
+    const dayDate = new Date(year, month - 1, d);
+    const dayOfWeek = dayDate.getDay();
+    const dateStr = `${year}-${String(month).padStart(2, '0')}-${String(d).padStart(2, '0')}`;
+    list.push({
+      day: d,
+      dateStr: dateStr,
+      dayOfWeek: dayOfWeek,
+      dayOfWeekName: weekDayNames[dayOfWeek],
+      workHoursText: "",
+      workHours: 0,
+      transitHoursText: "",
+      transitHours: 0
+    });
+  }
+  return list;
+}
+
+function sortStaffList() {
+  staffList.sort((a, b) => {
+    const idA = parseInt(a.id, 10);
+    const idB = parseInt(b.id, 10);
+    if (!isNaN(idA) && !isNaN(idB)) {
+      return idA - idB;
+    }
+    return String(a.id).localeCompare(String(b.id));
+  });
+}
+
+function sortHolidaysList() {
+  holidaysList.sort((a, b) => a.date.localeCompare(b.date));
+}
+
+function initDefaultData() {
+  staffList = [];
+  sortHolidaysList();
+}
+
+function resolveDayStatus(staff, day) {
+  const holidayDates = holidaysList.map(h => h.date);
+  const isHoliday = holidayDates.includes(day.dateStr);
+
+  if (staff.dayOverrides && staff.dayOverrides[day.dateStr]) {
+    return staff.dayOverrides[day.dateStr];
+  }
+
+  if (isHoliday) return 'holiday';
+
+  let isRestDay = false;
+  if (staff.restDayType !== "none" && day.dayOfWeek === parseInt(staff.restDayType, 10)) {
+    isRestDay = true;
+  }
+  if (isRestDay) return 'rest';
+
+  let isRoutineOff = false;
+  if (staff.routineOffDay !== "none" && day.dayOfWeek === parseInt(staff.routineOffDay, 10)) {
+    isRoutineOff = true;
+  }
+  if (isRoutineOff) return 'routine';
+
+  return 'weekday';
+}
+
+function getOvertimeViolationList() {
+  const violations = [];
+
+  staffList.forEach(staff => {
+    staff.days.forEach(day => {
+      const status = resolveDayStatus(staff, day);
+      const work = day.workHours || 0;
+      const transit = day.transitHours || 0;
+      const totalDayHours = Math.round((work + transit) * 100) / 100;
+
+      if (status === 'holiday' || status === 'rest') {
+        if (totalDayHours > 8.0) {
+          const excess = Math.round((totalDayHours - 8.0) * 100) / 100;
+          const holObj = holidaysList.find(h => h.date === day.dateStr);
+          const holidayName = holObj ? holObj.note : "國定假日";
+
+          violations.push({
+            staffName: staff.name,
+            staffId: staff.id || "未設",
+            month: currentPayrollMonth,
+            monthChinese: formatYearMonthChinese(currentPayrollMonth),
+            dateStr: day.dateStr,
+            dayOfWeekName: day.dayOfWeekName,
+            type: status === 'holiday' ? `國定假日 (${holidayName})` : "休息日",
+            workHours: work,
+            workHoursText: day.workHoursText || formatHoursToChinese(work),
+            transitHours: transit,
+            transitHoursText: day.transitHoursText || formatHoursToChinese(transit),
+            totalHours: totalDayHours,
+            excessHours: excess,
+            limitText: "8.00 時",
+            note: `休息日／國假合計工時 ${totalDayHours.toFixed(2)} 小時，超出 8 小時標準 ${excess.toFixed(2)} 小時`
+          });
+        }
+      } else if (status === 'weekday') {
+        if (totalDayHours > 10.0) {
+          const excess = Math.round((totalDayHours - 10.0) * 100) / 100;
+          violations.push({
+            staffName: staff.name,
+            staffId: staff.id || "未設",
+            month: currentPayrollMonth,
+            monthChinese: formatYearMonthChinese(currentPayrollMonth),
+            dateStr: day.dateStr,
+            dayOfWeekName: day.dayOfWeekName,
+            type: "平日工作日",
+            workHours: work,
+            workHoursText: day.workHoursText || formatHoursToChinese(work),
+            transitHours: transit,
+            transitHoursText: day.transitHoursText || formatHoursToChinese(transit),
+            totalHours: totalDayHours,
+            excessHours: excess,
+            limitText: "10.00 時",
+            note: `平日合計工時 (排班+轉場) ${totalDayHours.toFixed(2)} 小時，超出 10 小時上限 ${excess.toFixed(2)} 小時！`
+          });
+        }
+      }
+    });
+  });
+
+  return violations;
+}
+
+function formatYearMonthChinese(ymStr) {
+  const [y, m] = ymStr.split('-').map(Number);
+  return `${y - 1911}年${m}月`;
+}
+
+function renderOvertimeAlerts() {
+  const violations = getOvertimeViolationList();
+  const tbody = document.getElementById("overtimeAlertTableBody");
+  const badge = document.getElementById("overtimeBadgeCount");
+  tbody.innerHTML = "";
+
+  badge.innerText = `${violations.length} 件`;
+
+  if (violations.length === 0) {
+    tbody.innerHTML = `
+      <tr>
+        <td colspan="10" class="py-4 text-center text-slate-400 font-sans">
+          <div class="flex items-center justify-center gap-2">
+            <i class="fa-solid fa-circle-check text-emerald-500 text-base"></i>
+            <span class="text-emerald-700 font-medium">全月合規：休息日／國假合計未超過 8 小時，平日合計未超過 10 小時，符合長照與勞基法規範。</span>
+          </div>
+        </td>
+      </tr>
+    `;
+    return;
+  }
+
+  violations.forEach(v => {
+    const tr = document.createElement("tr");
+    tr.className = "hover:bg-rose-50/60 transition";
+    tr.innerHTML = `
+      <td class="py-2 px-3 font-bold text-slate-800">${v.staffName}</td>
+      <td class="py-2 px-2 text-slate-600">${v.staffId}</td>
+      <td class="py-2 px-2 text-slate-600">${v.monthChinese}</td>
+      <td class="py-2 px-3 font-semibold text-rose-700">${v.dateStr.slice(5)} (週${v.dayOfWeekName})</td>
+      <td class="py-2 px-2"><span class="bg-rose-100 text-rose-800 border border-rose-300 text-xs px-2 py-0.5 rounded font-bold">${v.type}</span></td>
+      <td class="py-2 px-2 font-medium">${v.workHours.toFixed(2)} <span class="text-[10px] text-slate-400">(${v.workHoursText})</span></td>
+      <td class="py-2 px-2 text-cyan-800 font-medium">${v.transitHours.toFixed(2)} <span class="text-[10px] text-slate-400">(${v.transitHoursText})</span></td>
+      <td class="py-2 px-3 font-bold text-rose-700 bg-rose-100/50">${v.totalHours.toFixed(2)} 時</td>
+      <td class="py-2 px-2 font-bold text-red-600">+${v.excessHours.toFixed(2)} 時</td>
+      <td class="py-2 px-3 text-left font-sans text-xs text-slate-600">${v.note}</td>
+    `;
+    tbody.appendChild(tr);
+  });
+}
+
+function renderPayrollTable() {
+  sortStaffList();
+  renderOvertimeAlerts();
+  const tbody = document.getElementById("payrollTableBody");
+  tbody.innerHTML = "";
+
+  document.getElementById("totalStaffCount").innerText = staffList.length;
+
+  const holHeader = document.getElementById("holidayColHeader");
+  if (holidaysList.length > 0) {
+    sortHolidaysList();
+    const datesShort = holidaysList.map(h => h.date.slice(5).replace('-', '/')).join(' - ');
+    holHeader.innerHTML = `${datesShort} 國假<br><span class="text-[10px] font-normal text-rose-800">(排班+轉場)</span>`;
+  } else {
+    holHeader.innerHTML = `當月國假<br><span class="text-[10px] font-normal text-slate-500">(排班+轉場)</span>`;
+  }
+
+  staffList.forEach((staff, idx) => {
+    const calc = calculateStaffPayroll(staff);
+    const tr = document.createElement("tr");
+    tr.className = "hover:bg-slate-50 transition border-b border-slate-200 text-slate-800";
+
+    const certClass = staff.hasCert ? "has-cert-bg cursor-pointer select-none" : "hover:bg-yellow-50 cursor-pointer select-none text-slate-700";
+    const rest3_8Class = calc.restDay3_8 > 0 ? "font-bold text-slate-800" : "text-slate-400";
+
+    tr.innerHTML = `
+      <td class="py-2.5 px-2 border-r border-slate-200 text-slate-500">${currentPayrollMonth.replace('-', '.')}</td>
+      <td class="py-2.5 px-2 border-r border-slate-200 font-bold text-teal-800">${staff.id || '-'}</td>
+      <td class="py-2.5 px-3 border-r border-slate-200 ${certClass}" onclick="toggleCert(${idx})" title="點擊切換丙照反黃 (超過120小時給1000元)">
+        <div class="flex items-center justify-center gap-1">
+          <span>${staff.name}</span>
+          ${staff.hasCert ? '<i class="fa-solid fa-award text-amber-600 text-xs"></i>' : ''}
+        </div>
+      </td>
+      <td class="py-2.5 px-2 border-r border-slate-200 font-semibold bg-sky-50/30">
+        ${calc.totalScheduleHours.toFixed(2)}
+      </td>
+      <td class="py-2.5 px-2 border-r border-slate-200 font-semibold bg-cyan-50/50 text-cyan-900" title="原始轉場: ${staff.sheetTransitHours}，國假扣除: ${calc.holidayTransitDeducted}">
+        ${calc.adjustedTransitHours.toFixed(2)}
+      </td>
+      <td class="py-2.5 px-2 border-r border-slate-200 ${calc.certBonus > 0 ? 'text-rose-600 font-bold bg-rose-50/30' : 'text-slate-400'}">
+        ${calc.certBonus > 0 ? calc.certBonus.toFixed(2) : '0.00'}
+      </td>
+      <td class="py-2.5 px-2 border-r border-slate-200 ${calc.weekdayOvertime > 0 ? 'font-bold text-purple-700 bg-purple-50/30' : 'text-slate-300'}">
+        ${calc.weekdayOvertime > 0 ? calc.weekdayOvertime.toFixed(2) : ''}
+      </td>
+      <td class="py-2.5 px-2 border-r border-slate-200 ${calc.restDay1_2 > 0 ? 'font-bold text-purple-700 bg-purple-50/30' : 'text-slate-300'}">
+        ${calc.restDay1_2 > 0 ? calc.restDay1_2.toFixed(2) : ''}
+      </td>
+      <td class="py-2.5 px-2 border-r border-slate-200 ${rest3_8Class}">
+        ${calc.restDay3_8 > 0 ? calc.restDay3_8.toFixed(2) : ''}
+      </td>
+      <td class="py-2.5 px-2 border-r border-slate-200 ${calc.satHours > 0 ? 'font-semibold text-indigo-700' : 'text-slate-300'}">
+        ${calc.satHours > 0 ? calc.satHours.toFixed(2) : ''}
+      </td>
+      <td class="py-2.5 px-2 border-r border-slate-200 ${calc.sunHours > 0 ? 'font-semibold text-indigo-700' : 'text-slate-300'}">
+        ${calc.sunHours > 0 ? calc.sunHours.toFixed(2) : ''}
+      </td>
+      <td class="py-2.5 px-2 border-r border-slate-200 ${calc.holidayTotal > 0 ? 'font-bold text-rose-700 bg-rose-50/40' : 'text-slate-300'}">
+        ${calc.holidayTotal > 0 ? calc.holidayTotal.toFixed(2) : ''}
+      </td>
+      <td class="py-2.5 px-2 no-print">
+        <button onclick="openStaffDetail(${idx})" class="text-teal-700 hover:text-teal-900 font-sans font-medium text-xs bg-teal-50 hover:bg-teal-100 border border-teal-200 px-2.5 py-1 rounded-lg transition flex items-center gap-1 mx-auto">
+          <i class="fa-solid fa-calendar-check"></i>排休/明細
+        </button>
+      </td>
+    `;
+    tbody.appendChild(tr);
+  });
+}
+
+function toggleCert(staffIdx) {
+  staffList[staffIdx].hasCert = !staffList[staffIdx].hasCert;
+  renderPayrollTable();
+}
+
+function openStaffDetail(idx) {
+  activeStaffIndex = idx;
+  const staff = staffList[idx];
+  document.getElementById("detailStaffTitle").innerText = `${staff.name} (${staff.id || '未設工號'}) - 每日排班細項與排休判定`;
+  document.getElementById("detailRestDaySelect").value = staff.restDayType;
+  document.getElementById("detailRoutineOffSelect").value = staff.routineOffDay !== undefined ? staff.routineOffDay : "0";
+  
+  renderDailyDetailTable();
+  document.getElementById("staffDetailModal").scrollIntoView({ behavior: 'smooth' });
+}
+
+function onStaffRestDayTypeChange(val) {
+  if (staffList[activeStaffIndex]) {
+    staffList[activeStaffIndex].restDayType = val;
+    renderPayrollTable();
+    renderDailyDetailTable();
+  }
+}
+
+function onStaffRoutineOffChange(val) {
+  if (staffList[activeStaffIndex]) {
+    staffList[activeStaffIndex].routineOffDay = val;
+    renderPayrollTable();
+    renderDailyDetailTable();
+  }
+}
+
+function renderDailyDetailTable() {
+  const staff = staffList[activeStaffIndex];
+  if (!staff) return;
+
+  const tbody = document.getElementById("dailyDetailTableBody");
+  tbody.innerHTML = "";
+
+  staff.days.forEach((day, dIdx) => {
+    const status = resolveDayStatus(staff, day);
+    const work = day.workHours || 0;
+    const transit = day.transitHours || 0;
+
+    let weekdayOt = 0;
+    let r1_2 = 0;
+    let r3_8 = 0;
+    let satH = 0;
+    let sunH = 0;
+    let holH = 0;
+
+    let statusBadge = "";
+    let rowClass = "hover:bg-slate-50";
+
+    if (status === 'holiday') {
+      holH = work + transit;
+      statusBadge = `<button onclick="cycleDayStatus(${dIdx})" class="bg-rose-100 text-rose-800 border border-rose-300 hover:bg-rose-200 px-2.5 py-1 rounded font-bold transition">國定假日 (可切換)</button>`;
+      rowClass = "bg-rose-50/40";
+    } else if (status === 'rest') {
+      if (work > 0) {
+        r1_2 = Math.min(work, 2.0);
+        r3_8 = Math.max(0, work - 2.0);
+      }
+      statusBadge = `<button onclick="cycleDayStatus(${dIdx})" class="bg-amber-100 text-amber-900 border border-amber-300 hover:bg-amber-200 px-2.5 py-1 rounded font-bold transition">休息日 (可切換)</button>`;
+      rowClass = "bg-amber-50/30";
+    } else if (status === 'routine') {
+      statusBadge = `<button onclick="cycleDayStatus(${dIdx})" class="bg-indigo-100 text-indigo-900 border border-indigo-300 hover:bg-indigo-200 px-2.5 py-1 rounded font-bold transition">例假日 (可切換)</button>`;
+      rowClass = "bg-indigo-50/20";
+    } else {
+      if (work > 8.0) weekdayOt = (work - 8.0);
+      if (day.dayOfWeek === 6) satH = work;
+      if (day.dayOfWeek === 0) sunH = work;
+      statusBadge = `<button onclick="cycleDayStatus(${dIdx})" class="bg-slate-100 text-slate-700 border border-slate-300 hover:bg-teal-50 hover:text-teal-800 px-2.5 py-1 rounded transition">平日上班 (可切換)</button>`;
+    }
+
+    const tr = document.createElement("tr");
+    tr.className = rowClass;
+    
+    tr.innerHTML = `
+      <td class="py-2 px-2 font-medium text-slate-600">${day.dateStr.slice(5)}</td>
+      <td class="py-2 px-2 ${day.dayOfWeek === 6 ? 'text-indigo-600 font-bold' : (day.dayOfWeek === 0 ? 'text-rose-600 font-bold' : '')}">
+        週${day.dayOfWeekName}
+      </td>
+      <td class="py-2 px-2">${statusBadge}</td>
+      <td class="py-2 px-2 text-slate-500 font-sans">${day.workHoursText || '-'}</td>
+      <td class="py-2 px-2 font-bold ${work > 0 ? 'text-slate-800' : 'text-slate-300'}">${work > 0 ? work.toFixed(2) : '-'}</td>
+      <td class="py-2 px-2 text-slate-500 font-sans">${day.transitHoursText || '-'}</td>
+      <td class="py-2 px-2 ${transit > 0 ? 'text-cyan-800 font-medium' : 'text-slate-300'}">${transit > 0 ? transit.toFixed(2) : '-'}</td>
+      <td class="py-2 px-2 ${weekdayOt > 0 ? 'text-purple-700 font-bold' : 'text-slate-300'}">${weekdayOt > 0 ? weekdayOt.toFixed(2) : '-'}</td>
+      <td class="py-2 px-2 ${r1_2 > 0 ? 'text-purple-700 font-bold' : 'text-slate-300'}">${r1_2 > 0 ? r1_2.toFixed(2) : '-'}</td>
+      <td class="py-2 px-2 ${r3_8 > 0 ? 'text-purple-700 font-bold' : 'text-slate-300'}">${r3_8 > 0 ? r3_8.toFixed(2) : '-'}</td>
+      <td class="py-2 px-2 ${satH > 0 ? 'text-indigo-700 font-bold' : 'text-slate-300'}">${satH > 0 ? satH.toFixed(2) : '-'}</td>
+      <td class="py-2 px-2 ${sunH > 0 ? 'text-indigo-700 font-bold' : 'text-slate-300'}">${sunH > 0 ? sunH.toFixed(2) : '-'}</td>
+      <td class="py-2 px-2 ${holH > 0 ? 'text-rose-700 font-bold bg-rose-100/50' : 'text-slate-300'}">${holH > 0 ? holH.toFixed(2) : '-'}</td>
+    `;
+    tbody.appendChild(tr);
+  });
+}
+
+function cycleDayStatus(dayIndex) {
+  const staff = staffList[activeStaffIndex];
+  if (!staff) return;
+  if (!staff.dayOverrides) staff.dayOverrides = {};
+
+  const day = staff.days[dayIndex];
+  const currentStatus = resolveDayStatus(staff, day);
+
+  let nextStatus = 'weekday';
+  if (currentStatus === 'weekday') {
+    nextStatus = 'rest';
+  } else if (currentStatus === 'rest') {
+    nextStatus = 'routine';
+  } else {
+    nextStatus = 'weekday';
+  }
+
+  staff.dayOverrides[day.dateStr] = nextStatus;
+
+  renderPayrollTable();
+  renderDailyDetailTable();
+}
+
+function renderHolidayBadges() {
+  sortHolidaysList();
+  const container = document.getElementById("holidayBadgesContainer");
+  container.innerHTML = "";
+  
+  document.getElementById("holidayCountTag").innerText = `共 ${holidaysList.length} 天國假：`;
+
+  if (holidaysList.length === 0) {
+    container.innerHTML = `<span class="text-xs text-slate-400 italic py-1 px-2">目前未設定任何國定假日。若當月有國假請由上方新增。</span>`;
+    return;
+  }
+
+  holidaysList.forEach((h, i) => {
+    const badge = document.createElement("div");
+    badge.className = "inline-flex items-center gap-1.5 bg-rose-50 text-rose-700 border border-rose-200 px-2.5 py-1 rounded-lg text-xs font-medium";
+    badge.innerHTML = `
+      <i class="fa-regular fa-calendar-xmark text-rose-500"></i>
+      <span>${h.date} (${h.note || '國定假日'})</span>
+      <button onclick="removeHoliday(${i})" class="ml-1 text-rose-400 hover:text-rose-700 focus:outline-none">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    `;
+    container.appendChild(badge);
+  });
+}
+
+function addHoliday() {
+  const dateVal = document.getElementById("newHolidayDateInput").value;
+  const noteVal = document.getElementById("newHolidayNoteInput").value.trim();
+  if (!dateVal) {
+    showToast("請選擇國定假日日期");
+    return;
+  }
+
+  if (holidaysList.some(h => h.date === dateVal)) {
+    showToast("此日期已在國定假日清單中！");
+    return;
+  }
+
+  holidaysList.push({ date: dateVal, note: noteVal || "國定假日" });
+  sortHolidaysList();
+  renderHolidayBadges();
+  renderPayrollTable();
+  renderDailyDetailTable();
+  showToast(`已新增國假日：${dateVal}`);
+}
+
+function removeHoliday(index) {
+  const removed = holidaysList.splice(index, 1);
+  renderHolidayBadges();
+  renderPayrollTable();
+  renderDailyDetailTable();
+  showToast(`已移除國假日：${removed[0].date}`);
+}
+
+function onMonthChange(newMonth) {
+  currentPayrollMonth = newMonth;
+  staffList.forEach(s => {
+    s.days = generateDaysOfMonth(currentPayrollMonth);
+    s.dayOverrides = {};
+  });
+  renderPayrollTable();
+  renderDailyDetailTable();
+  showToast(`已切換薪資年月為：${newMonth}`);
+}
+
+document.getElementById("excelFileInput").addEventListener("change", function(e) {
+  const file = e.target.files[0];
+  if (!file) return;
+
+  rawUploadedFileName = file.name;
+  const reader = new FileReader();
+  reader.onload = function(evt) {
+    try {
+      rawUploadedWorkbookArrayBuffer = evt.target.result;
+      const data = new Uint8Array(rawUploadedWorkbookArrayBuffer.slice(0));
+      const workbook = XLSX.read(data, { type: 'array' });
+      parseWorkbook(workbook);
+    } catch (err) {
+      console.error(err);
+      showToast("匯入班表失敗，請確認是否為標準 Excel 檔案格式。");
+    }
+  };
+  reader.readAsArrayBuffer(file);
+});
+
+// 完美回填 Excel 並全格上色（休息日黃色、國假淡橘色）
+async function downloadArchivedScheduleExcel() {
+  if (staffList.length === 0) {
+    showToast("目前沒有可歸檔的居服員資料，請先匯入班表！");
+    return;
+  }
+
+  showToast("正在產生各人員分頁之歸檔欄位與排班超時明細，請稍候...");
+
+  try {
+    const workbook = new ExcelJS.Workbook();
+
+    if (rawUploadedWorkbookArrayBuffer) {
+      await workbook.xlsx.load(rawUploadedWorkbookArrayBuffer.slice(0));
+    } else {
+      showToast("請先上傳原始班表 Excel 檔案！");
+      return;
+    }
+
+    // 1. 在活頁本最前面建立「排班超時明細」總表分頁
+    const violations = getOvertimeViolationList();
+    const oldSheet = workbook.getWorksheet("排班超時明細");
+    if (oldSheet) {
+      workbook.removeWorksheet(oldSheet.id);
+    }
+
+    const alertSheet = workbook.addWorksheet("排班超時明細");
+    
+    // 確保超時明細移至第一張工作表
+    if (workbook.worksheets.length > 1) {
+      const sIdx = workbook.worksheets.indexOf(alertSheet);
+      if (sIdx > -1) {
+        workbook.worksheets.splice(sIdx, 1);
+        workbook.worksheets.unshift(alertSheet);
+      }
+    }
+
+    alertSheet.columns = [
+      { key: 'staffName', width: 14 },
+      { key: 'staffId', width: 12 },
+      { key: 'month', width: 14 },
+      { key: 'date', width: 16 },
+      { key: 'type', width: 16 },
+      { key: 'workHours', width: 14 },
+      { key: 'transitHours', width: 14 },
+      { key: 'totalHours', width: 16 },
+      { key: 'excessHours', width: 16 },
+      { key: 'note', width: 45 }
+    ];
+
+    alertSheet.mergeCells('A1:J1');
+    const mainTitle = alertSheet.getCell('A1');
+    mainTitle.value = `信義長照居家式服務 - 排班超時明細總表 (休息日/國假>8h，平日>10h)`;
+    mainTitle.font = { name: 'Microsoft JhengHei', size: 14, bold: true, color: { argb: 'FF991B1B' } };
+    mainTitle.alignment = { vertical: 'middle', horizontal: 'center' };
+    mainTitle.fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FFFEE2E2' } };
+    alertSheet.getRow(1).height = 34;
+
+    alertSheet.mergeCells('A2:J2');
+    const subTitle = alertSheet.getCell('A2');
+    subTitle.value = `檢核條件：① 休息日/國假排班+轉場 > 8小時；② 平日工作日排班+轉場 > 10小時 (共計 ${violations.length} 筆超時紀錄)`;
+    subTitle.font = { name: 'Microsoft JhengHei', size: 10, italic: true, color: { argb: 'FF475569' } };
+    subTitle.alignment = { vertical: 'middle', horizontal: 'left', indent: 1 };
+    alertSheet.getRow(2).height = 22;
+
+    const thRow = alertSheet.addRow([
+      "居服員名字", "員工編號", "排班月份", "超時日期", 
+      "假別類型", "當日排班時數", "當日轉場時數", "當日合計工時", "超出上限時數", "備註說明"
+    ]);
+    thRow.height = 26;
+    thRow.eachCell((cell) => {
+      cell.font = { name: 'Microsoft JhengHei', size: 10, bold: true, color: { argb: 'FFFFFFFF' } };
+      cell.alignment = { vertical: 'middle', horizontal: 'center' };
+      cell.fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FFDC2626' } };
+    });
+
+    const thinBorder = {
+      top: { style: 'thin', color: { argb: 'FFE2E8F0' } },
+      left: { style: 'thin', color: { argb: 'FFE2E8F0' } },
+      bottom: { style: 'thin', color: { argb: 'FFE2E8F0' } },
+      right: { style: 'thin', color: { argb: 'FFE2E8F0' } }
+    };
+
+    if (violations.length === 0) {
+      alertSheet.mergeCells('A4:J4');
+      const noDataCell = alertSheet.getCell('A4');
+      noDataCell.value = "✅ 本月無排班超時紀錄，所有人員各項工時皆在標準以內，符合規範。";
+      noDataCell.font = { name: 'Microsoft JhengHei', size: 11, bold: true, color: { argb: 'FF047857' } };
+      noDataCell.alignment = { vertical: 'middle', horizontal: 'center' };
+      alertSheet.getRow(4).height = 36;
+    } else {
+      violations.forEach(v => {
+        const dataRow = alertSheet.addRow([
+          v.staffName,
+          v.staffId,
+          v.monthChinese,
+          `${v.dateStr} (週${v.dayOfWeekName})`,
+          v.type,
+          `${v.workHours.toFixed(2)} (${v.workHoursText})`,
+          `${v.transitHours.toFixed(2)} (${v.transitHoursText})`,
+          `${v.totalHours.toFixed(2)} 小時`,
+          `+${v.excessHours.toFixed(2)} 小時`,
+          v.note
+        ]);
+        dataRow.height = 24;
+        dataRow.eachCell((cell, colNum) => {
+          cell.border = thinBorder;
+          cell.font = { name: 'Microsoft JhengHei', size: 9.5 };
+          cell.alignment = { vertical: 'middle', horizontal: colNum === 10 ? 'left' : 'center' };
+
+          if (colNum === 8 || colNum === 9) {
+            cell.fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FFFEE2E2' } };
+            cell.font = { name: 'Microsoft JhengHei', size: 10, bold: true, color: { argb: 'FFB91C1C' } };
+          }
+        });
+      });
+    }
+
+    // 2. 居服員個別分頁處理
+    sortHolidaysList();
+    const holidayDatesShort = holidaysList.map(h => {
+      const parts = h.date.split('-');
+      return `${parseInt(parts[1], 10)}/${parseInt(parts[2], 10)}`;
+    }).join(' - ');
+    const holidayTitle = holidayDatesShort ? `${holidayDatesShort}\n國假` : "國定假日";
+
+    workbook.eachSheet((worksheet) => {
+      if (worksheet.name === "排班超時明細") return;
+
+      const sheetTitle = worksheet.name.trim();
+      let matchedStaff = staffList.find(s => s.name === sheetTitle || sheetTitle.includes(s.name));
+
+      if (!matchedStaff) {
+        worksheet.eachRow((row, rowNumber) => {
+          if (rowNumber <= 4) {
+            const text = row.values ? row.values.join(" ") : "";
+            const matched = staffList.find(s => text.includes(s.name));
+            if (matched) matchedStaff = matched;
+          }
+        });
+      }
+
+      if (!matchedStaff && staffList.length === 1) {
+        matchedStaff = staffList[0];
+      }
+
+      if (!matchedStaff) return;
+
+      const calc = calculateStaffPayroll(matchedStaff);
+
+      let summaryRowIdx = -1;
+      worksheet.eachRow((row, rowNumber) => {
+        row.eachCell((cell) => {
+          const val = String(cell.value || "");
+          if (val.includes("預排總時數") && summaryRowIdx === -1) {
+            summaryRowIdx = rowNumber;
+          }
+        });
+      });
+
+      // 休息日底色：淡黃色；國定假日底色：淡橘色（整格完全上色）
+      const yellowRestFill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FFFFF3B0' } };
+      const orangeHolidayFill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FFFFCC99' } };
+
+      worksheet.eachRow((row, rowNumber) => {
+        if (rowNumber >= 5 && (summaryRowIdx === -1 || rowNumber < summaryRowIdx)) {
+          row.eachCell((cell, colNumber) => {
+            const cellText = String(cell.value || "").trim();
+            const dateMatch = cellText.match(/^([1-3]?[0-9])\b/);
+            if (dateMatch) {
+              const dayNum = parseInt(dateMatch[1], 10);
+              const dayObj = matchedStaff.days.find(d => d.day === dayNum);
+              if (dayObj) {
+                const status = resolveDayStatus(matchedStaff, dayObj);
+                if (status === 'rest') {
+                  cell.fill = yellowRestFill;
+                  const nextRow = worksheet.getRow(rowNumber + 1);
+                  if (nextRow) {
+                    const nextCell = nextRow.getCell(colNumber);
+                    if (nextCell && !String(nextCell.value || "").match(/^[1-3]?[0-9]\b/)) {
+                      nextCell.fill = yellowRestFill;
+                    }
+                  }
+                } else if (status === 'holiday') {
+                  cell.fill = orangeHolidayFill;
+                  const nextRow = worksheet.getRow(rowNumber + 1);
+                  if (nextRow) {
+                    const nextCell = nextRow.getCell(colNumber);
+                    if (nextCell && !String(nextCell.value || "").match(/^[1-3]?[0-9]\b/)) {
+                      nextCell.fill = orangeHolidayFill;
+                    }
+                  }
+                }
+              }
+            }
+          });
+        }
+      });
+
+      const insertAtRow = summaryRowIdx > 0 ? summaryRowIdx : 15;
+
+      let needInsert = true;
+      const checkCell = worksheet.getCell(`A${insertAtRow}`);
+      if (String(checkCell.value || "").includes("丙照費")) {
+        needInsert = false;
+      }
+
+      if (needInsert) {
+        worksheet.spliceRows(insertAtRow, 0, [], []);
+      }
+
+      const headerRowNumber = insertAtRow;
+      const valueRowNumber = insertAtRow + 1;
+
+      const headerRow = worksheet.getRow(headerRowNumber);
+      const valueRow = worksheet.getRow(valueRowNumber);
+
+      headerRow.height = 36;
+      valueRow.height = 26;
+
+      const archiveColumns = [
+        {
+          col: 1,
+          header: "丙照費\n當月滿120小時,\n發放1000元",
+          val: calc.certBonus > 0 ? calc.certBonus.toFixed(2) : "0.00",
+          headerColor: "FFDC2626",
+          isBold: true,
+          bgColor: matchedStaff.hasCert ? "FFFFF0A0" : "FFFFFFFF"
+        },
+        {
+          col: 2,
+          header: "平日加班\n(第8-10小時)\n1.34倍",
+          val: calc.weekdayOvertime > 0 ? calc.weekdayOvertime.toFixed(2) : "",
+          headerColor: "FF7C3AED",
+          isBold: true
+        },
+        {
+          col: 3,
+          header: "休息日加班\n(第1-2小時)\n1.34倍",
+          val: calc.restDay1_2 > 0 ? calc.restDay1_2.toFixed(2) : "",
+          headerColor: "FF7C3AED",
+          isBold: true,
+          bgColor: "FFFFF9C4"
+        },
+        {
+          col: 4,
+          header: "休息日加班\n(第3-8小時)\n1.67倍",
+          val: calc.restDay3_8 > 0 ? calc.restDay3_8.toFixed(2) : "",
+          headerColor: "FF7C3AED",
+          isBold: true,
+          bgColor: "FFFFF9C4"
+        },
+        {
+          col: 5,
+          header: "週六時數\n(20元)",
+          val: calc.satHours > 0 ? calc.satHours.toFixed(2) : "",
+          headerColor: "FF2563EB",
+          isBold: true
+        },
+        {
+          col: 6,
+          header: "週日時數\n(50元)",
+          val: calc.sunHours > 0 ? calc.sunHours.toFixed(2) : "",
+          headerColor: "FF2563EB",
+          isBold: true
+        },
+        {
+          col: 7,
+          header: holidayTitle,
+          val: calc.holidayTotal > 0 ? calc.holidayTotal.toFixed(2) : "",
+          headerColor: "FFDC2626",
+          isBold: true,
+          bgColor: "FFFFE0B2"
+        }
+      ];
+
+      const borderStyle = {
+        top: { style: 'thin', color: { argb: 'FF94A3B8' } },
+        left: { style: 'thin', color: { argb: 'FF94A3B8' } },
+        bottom: { style: 'thin', color: { argb: 'FF94A3B8' } },
+        right: { style: 'thin', color: { argb: 'FF94A3B8' } }
+      };
+
+      archiveColumns.forEach(item => {
+        const hCell = headerRow.getCell(item.col);
+        hCell.value = item.header;
+        hCell.alignment = { vertical: 'middle', horizontal: 'center', wrapText: true };
+        hCell.font = { name: 'Microsoft JhengHei', size: 9, bold: true, color: { argb: item.headerColor } };
+        hCell.border = borderStyle;
+        hCell.fill = {
+          type: 'pattern',
+          pattern: 'solid',
+          fgColor: { argb: item.bgColor ? item.bgColor : 'FFF8FAFC' }
+        };
+
+        const vCell = valueRow.getCell(item.col);
+        vCell.value = item.val;
+        vCell.alignment = { vertical: 'middle', horizontal: 'center' };
+        vCell.border = borderStyle;
+        vCell.font = { name: 'Microsoft JhengHei', size: 10, bold: item.isBold, color: { argb: 'FF0F172A' } };
+        if (item.bgColor) {
+          vCell.fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: item.bgColor } };
+        }
+      });
+    });
+
+    const buffer = await workbook.xlsx.writeBuffer();
+    const blob = new Blob([buffer], { type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" });
+    const downloadUrl = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = downloadUrl;
+    const baseName = rawUploadedFileName.replace(/\.xlsx$/i, "");
+    a.download = `${baseName}_(含超時總表與歸檔列).xlsx`;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(downloadUrl);
+
+    showToast("已成功下載！第一頁為「排班超時明細」，後續各分頁已填入歸檔列！");
+  } catch (err) {
+    console.error("歸檔匯出失敗：", err);
+    showToast("產生歸檔 Excel 失敗，請確認檔案格式正常。");
+  }
+}
+
+function parseWorkbook(workbook) {
+  const newStaffList = [];
+
+  workbook.SheetNames.forEach(sheetName => {
+    if (sheetName.includes("明細") || sheetName.includes("總表")) return;
+
+    const worksheet = workbook.Sheets[sheetName];
+    if (!worksheet) return;
+
+    const jsonRows = XLSX.utils.sheet_to_json(worksheet, { header: 1, defval: "" });
+    if (jsonRows.length === 0) return;
+
+    let staffName = sheetName.trim();
+    let staffId = "";
+    let yearMonthFound = currentPayrollMonth;
+    let sheetTotalHours = 0;
+    let sheetTransitHours = 0;
+
+    for (let r = 0; r < Math.min(6, jsonRows.length); r++) {
+      const rowStr = (jsonRows[r] || []).join(" ");
+      const nameMatch = rowStr.match(/員工\s*([^\s\d]+)/);
+      if (nameMatch && nameMatch[1]) {
+        staffName = nameMatch[1].trim();
+      }
+      const idMatch = rowStr.match(/員工編號\s*([A-Za-z0-9]+)/);
+      if (idMatch && idMatch[1]) {
+        staffId = idMatch[1].trim();
+      }
+      const ymMatch = rowStr.match(/(\d+)年(\d+)月/);
+      if (ymMatch) {
+        const y = parseInt(ymMatch[1], 10) + (parseInt(ymMatch[1], 10) < 1900 ? 1911 : 0);
+        const m = String(parseInt(ymMatch[2], 10)).padStart(2, '0');
+        yearMonthFound = `${y}-${m}`;
+      }
+    }
+
+    for (let r = jsonRows.length - 1; r >= Math.max(0, jsonRows.length - 10); r--) {
+      const row = jsonRows[r] || [];
+      for (let c = 0; c < row.length; c++) {
+        const cellVal = String(row[c]).trim();
+        if (cellVal.includes("預排總時數")) {
+          const neighborVal = row[c + 1] || "";
+          const matchDec = String(neighborVal).match(/([\d\.]+)/) || cellVal.match(/([\d\.]+)/);
+          if (matchDec) sheetTotalHours = parseFloat(matchDec[1]);
+        }
+        if (cellVal.includes("轉場總時數")) {
+          const neighborVal = row[c + 1] || "";
+          const matchDec = String(neighborVal).match(/([\d\.]+)/) || cellVal.match(/([\d\.]+)/);
+          if (matchDec) sheetTransitHours = parseFloat(matchDec[1]);
+        }
+      }
+    }
+
+    const days = generateDaysOfMonth(yearMonthFound);
+    
+    for (let r = 0; r < jsonRows.length; r++) {
+      const row = jsonRows[r] || [];
+      for (let c = 0; c < row.length; c++) {
+        const cellText = String(row[c]).trim();
+        const dateMatch = cellText.match(/^([1-3]?[0-9])\s*\(([^)]+)\)/);
+        if (dateMatch) {
+          const dayNum = parseInt(dateMatch[1], 10);
+          const workStr = dateMatch[2];
+          const dayObj = days.find(d => d.day === dayNum);
+          if (dayObj) {
+            dayObj.workHoursText = workStr;
+            dayObj.workHours = parseTimeToHours(workStr);
+
+            // 轉場時間可能在同一個儲存格換行處 (如 "7 (8時10分)\n(2時15分)")，或在下一列
+            let foundTransit = false;
+            const lines = cellText.split('\n');
+            for (let l = 1; l < lines.length; l++) {
+              const tm = lines[l].trim().match(/^\(([^)]+)\)/);
+              if (tm) {
+                dayObj.transitHoursText = tm[1];
+                dayObj.transitHours = parseTimeToHours(tm[1]);
+                foundTransit = true;
+                break;
+              }
+            }
+
+            if (!foundTransit && jsonRows[r + 1] && jsonRows[r + 1][c]) {
+              const transitCell = String(jsonRows[r + 1][c]).trim();
+              const transMatch = transitCell.match(/^\(([^)]+)\)/);
+              if (transMatch) {
+                dayObj.transitHoursText = transMatch[1];
+                dayObj.transitHours = parseTimeToHours(transMatch[1]);
+              }
+            }
+          }
+        }
+      }
+    }
+
+    if (sheetTotalHours === 0) {
+      const sumW = days.reduce((acc, cur) => acc + (cur.workHours || 0), 0);
+      sheetTotalHours = Math.round(sumW * 100) / 100;
+    }
+    if (sheetTransitHours === 0) {
+      const sumT = days.reduce((acc, cur) => acc + (cur.transitHours || 0), 0);
+      sheetTransitHours = Math.round(sumT * 100) / 100;
+    }
+
+    newStaffList.push({
+      id: staffId || "未填",
+      name: staffName,
+      hasCert: sheetTotalHours >= 120,
+      restDayType: "6",
+      routineOffDay: 0,
+      dayOverrides: {},
+      sheetTotalHours: sheetTotalHours,
+      sheetTransitHours: sheetTransitHours,
+      days: days
+    });
+  });
+
+  if (newStaffList.length > 0) {
+    staffList = newStaffList;
+    sortStaffList(); // 匯入後強制自動依職編從小到大排序
+    activeStaffIndex = 0;
+    renderPayrollTable();
+    renderDailyDetailTable();
+    showToast(`成功解析並依職編排序匯入 ${newStaffList.length} 位居服員班表！`);
+  } else {
+    showToast("未能辨識出居服員班表資料，請確認格式。");
+  }
+}
+
+function calculateStaffPayroll(staff) {
+  let holidayTotal = 0;
+  let holidayTransitDeducted = 0;
+  let weekdayOvertime = 0;
+  let restDay1_2 = 0;
+  let restDay3_8 = 0;
+  let satHours = 0;
+  let sunHours = 0;
+
+  staff.days.forEach(day => {
+    const status = resolveDayStatus(staff, day);
+    const work = day.workHours || 0;
+    const transit = day.transitHours || 0;
+
+    if (status === 'holiday') {
+      holidayTotal += (work + transit);
+      holidayTransitDeducted += transit;
+    } else if (status === 'rest') {
+      if (work > 0) {
+        restDay1_2 += Math.min(work, 2.0);
+        if (work > 2.0) {
+          restDay3_8 += (work - 2.0);
+        }
+      }
+    } else if (status === 'routine') {
+      // 例假日
+    } else {
+      if (work > 8.0) {
+        weekdayOvertime += (work - 8.0);
+      }
+      if (day.dayOfWeek === 6) {
+        satHours += work;
+      }
+      if (day.dayOfWeek === 0) {
+        sunHours += work;
+      }
+    }
+  });
+
+  const totalScheduleHours = staff.sheetTotalHours > 0 ? staff.sheetTotalHours : staff.days.reduce((a, b) => a + (b.workHours || 0), 0);
+  const adjustedTransitHours = Math.max(0, staff.sheetTransitHours - holidayTransitDeducted);
+  const certBonus = (staff.hasCert && totalScheduleHours >= 120) ? 1000 : 0;
+
+  return {
+    totalScheduleHours: Math.round(totalScheduleHours * 100) / 100,
+    adjustedTransitHours: Math.round(adjustedTransitHours * 100) / 100,
+    holidayTransitDeducted: Math.round(holidayTransitDeducted * 100) / 100,
+    certBonus: certBonus,
+    weekdayOvertime: Math.round(weekdayOvertime * 100) / 100,
+    restDay1_2: Math.round(restDay1_2 * 100) / 100,
+    restDay3_8: Math.round(restDay3_8 * 100) / 100,
+    satHours: Math.round(satHours * 100) / 100,
+    sunHours: Math.round(sunHours * 100) / 100,
+    holidayTotal: Math.round(holidayTotal * 100) / 100
+  };
+}
+
+function exportResultExcel() {
+  if (staffList.length === 0) {
+    showToast("目前無任何居服員資料可供匯出！");
+    return;
+  }
+
+  sortStaffList();
+  sortHolidaysList();
+
+  const holidayDatesShort = holidaysList.map(h => h.date.slice(5).replace('-', '/')).join(' - ');
+  const holidayColName = holidayDatesShort ? `${holidayDatesShort} 國假` : "國假時數";
+
+  const headers = [
+    "薪資年月", "職編", "居服員名", "班表總時數 (預排總時數)", 
+    "班表-右下角轉場總時數 (扣國假轉場)", "丙照費", 
+    "平日加班(第8-10小時)", "休息日加班(第1-2小時)", "休息日加班(第3-8小時)", 
+    "週六時數(20元)", "週日時數(50元)", holidayColName
+  ];
+
+  const rows = [headers];
+
+  staffList.forEach(staff => {
+    const calc = calculateStaffPayroll(staff);
+    rows.push([
+      currentPayrollMonth.replace('-', '.'),
+      staff.id,
+      staff.name + (staff.hasCert ? " (丙照)" : ""),
+      calc.totalScheduleHours,
+      calc.adjustedTransitHours,
+      calc.certBonus,
+      calc.weekdayOvertime > 0 ? calc.weekdayOvertime : "",
+      calc.restDay1_2 > 0 ? calc.restDay1_2 : "",
+      calc.restDay3_8 > 0 ? calc.restDay3_8 : "",
+      calc.satHours > 0 ? calc.satHours : "",
+      calc.sunHours > 0 ? calc.sunHours : "",
+      calc.holidayTotal > 0 ? calc.holidayTotal : ""
+    ]);
+  });
+
+  const ws = XLSX.utils.aoa_to_sheet(rows);
+  const wb = XLSX.utils.book_new();
+  XLSX.utils.book_append_sheet(wb, ws, "薪資時數總表");
+
+  const fileName = `${currentPayrollMonth}_居服員薪資時數計算統計表.xlsx`;
+  XLSX.writeFile(wb, fileName);
+  showToast(`已成功下載：${fileName}`);
+}
+
+// ================= 模組二：A 碼勾稽運算 =================
+let calculationResults = { summary: [], workerData: {} };
 let detectedMonthGlobal = '';
+
 function updateTagPreview() {
   const sup = document.getElementById('supervisorSelect').value;
   const mVal = document.getElementById('monthInput').value;
@@ -709,9 +1970,6 @@ async function readWorkbook(file) {
   const data = await file.arrayBuffer();
   return XLSX.read(data, { type: 'array' });
 }
-
-// ================= A 碼勾稽運算 =================
-let calculationResults = { summary: [], workerData: {} };
 
 async function processAData() {
   const fA = document.getElementById('fileA').files[0];
@@ -936,92 +2194,6 @@ function renderAll() {
   });
 }
 
-// ================= 薪資計算模組 =================
-let salaryCalculationResults = [];
-async function processSalaryData() {
-  const fSvc = document.getElementById('fileSalarySvc').files[0];
-  if (!fSvc) {
-    alert('請選取【當月服務紀錄總表】！');
-    return;
-  }
-
-  document.getElementById('loadingSalary').style.display = 'block';
-  document.getElementById('salaryResultContainer').style.display = 'none';
-
-  setTimeout(async () => {
-    try {
-      const wbSvc = await readWorkbook(fSvc);
-      const wsSvc = wbSvc.Sheets[wbSvc.SheetNames[0]];
-      const rows = XLSX.utils.sheet_to_json(wsSvc, { header: 1 });
-      const stats = {};
-
-      for (let i = 3; i < rows.length; i++) {
-        const r = rows[i];
-        if (!r || r.length === 0) continue;
-        const w = String(r[32] || r[18] || '').trim();
-        const durationMin = Number(r[28]) || Number(r[24]) || 0;
-        const dateStr = String(r[6] || '');
-        if (!w || w === '居服員姓名' || w === '暫無資料') continue;
-
-        if (!stats[w]) stats[w] = { name: w, empNo: getWorkerEmpNo(w), totalMinutes: 0, satMinutes: 0, sunMinutes: 0 };
-        stats[w].totalMinutes += durationMin;
-
-        const dObj = new Date(dateStr.replace(/-/g, '/'));
-        if (!isNaN(dObj.getTime())) {
-          if (dObj.getDay() === 6) stats[w].satMinutes += durationMin;
-          if (dObj.getDay() === 0) stats[w].sunMinutes += durationMin;
-        }
-      }
-
-      salaryCalculationResults = Object.values(stats).map(w => {
-        const totHrs = Math.round((w.totalMinutes / 60) * 10) / 10;
-        const satHrs = Math.round((w.satMinutes / 60) * 10) / 10;
-        const sunHrs = Math.round((w.sunMinutes / 60) * 10) / 10;
-        const ot134Hrs = totHrs > 160 ? Math.round((totHrs - 160) * 10) / 10 : 0;
-        const normalHrs = totHrs - ot134Hrs;
-        const basePay = Math.ceil(normalHrs * 200);
-        const ot134Pay = Math.ceil(ot134Hrs * 268);
-        const weekendPay = Math.ceil(satHrs * 30 + sunHrs * 50);
-
-        let bonusRate = totHrs >= 160 ? 30 : (totHrs >= 120 ? 20 : 0);
-        const hourBonus = Math.ceil(totHrs * bonusRate);
-        const transPay = Math.ceil(totHrs * 0.1 * 196);
-        const grandTotal = basePay + ot134Pay + weekendPay + hourBonus + transPay;
-        const netPay = Math.round(grandTotal * 0.93);
-
-        return { empNo: w.empNo, name: w.name, totHrs, normalHrs, basePay, ot134Pay, weekendPay, hourBonus, transPay, grandTotal, netPay };
-      }).sort((a,b) => b.grandTotal - a.grandTotal);
-
-      const tbody = document.getElementById('salaryTbody');
-      tbody.innerHTML = '';
-      salaryCalculationResults.forEach(r => {
-        const tr = document.createElement('tr');
-        tr.innerHTML = `
-          <td>${r.empNo}</td>
-          <td><b>${r.name}</b></td>
-          <td>${r.totHrs} 小時</td>
-          <td>${r.normalHrs} 小時</td>
-          <td class="amount">$${r.basePay.toLocaleString()}</td>
-          <td class="amount">$${r.ot134Pay.toLocaleString()}</td>
-          <td class="amount">$0</td>
-          <td class="amount">$${r.weekendPay.toLocaleString()}</td>
-          <td class="amount">$${r.hourBonus.toLocaleString()}</td>
-          <td class="amount">$${r.transPay.toLocaleString()}</td>
-          <td class="amount total-amount">$${r.grandTotal.toLocaleString()}</td>
-          <td class="amount" style="color:#059669; font-weight:bold;">$${r.netPay.toLocaleString()}</td>
-        `;
-        tbody.appendChild(tr);
-      });
-
-      document.getElementById('loadingSalary').style.display = 'none';
-      document.getElementById('salaryResultContainer').style.display = 'block';
-    } catch (e) {
-      document.getElementById('loadingSalary').style.display = 'none';
-      alert('薪資計算失敗：' + e.message);
-    }
-  }, 100);
-}
-
 // 輔助函式
 function showToast(msg) {
   const t = document.getElementById('toast');
@@ -1048,12 +2220,6 @@ function copyTableText() {
   navigator.clipboard.writeText(txt);
   showToast('已複製 A 碼總表文字！');
 }
-function copySalaryTableText() {
-  let txt = '職編\t居服員\t總工時\t正常工時\t底薪\t1.34加班費\t週末加給\t工時加給\t轉場費\t應領合計\t實發金額\n';
-  salaryCalculationResults.forEach(r => { txt += `${r.empNo}\t${r.name}\t${r.totHrs}\t${r.normalHrs}\t${r.basePay}\t${r.ot134Pay}\t${r.weekendPay}\t${r.hourBonus}\t${r.transPay}\t${r.grandTotal}\t${r.netPay}\n`; });
-  navigator.clipboard.writeText(txt);
-  showToast('已複製薪資表文字！');
-}
 function scrollToWorker(name) {
   const el = document.getElementById(`card_${name}`);
   if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -1066,13 +2232,6 @@ function exportExcel() {
   const detailData = calculationResults.summary.map(w => ({ "職編": w.empNo, "居服員姓名": w.name, "考核": `${Math.round(w.eval * 100)}%`, "AA05與AA06算式": w.aa0506Text, "AA11算式": w.aa11Text, "應發總金額": w.grandTotal }));
   XLSX.utils.book_append_sheet(wb, XLSX.utils.json_to_sheet(detailData), "分區算式明細");
   XLSX.writeFile(wb, "居服A碼獎勵金核算總表.xlsx");
-}
-function exportSalaryExcel() {
-  if (salaryCalculationResults.length === 0) return;
-  const wb = XLSX.utils.book_new();
-  const data = salaryCalculationResults.map(r => ({ "職編": r.empNo, "居服員姓名": r.name, "總工時": r.totHrs, "正常工時": r.normalHrs, "基準本薪(200)": r.basePay, "1.34加班費": r.ot134Pay, "週末加給": r.weekendPay, "工時加給": r.hourBonus, "轉場費": r.transPay, "應發薪資合計": r.grandTotal, "實領金額": r.netPay }));
-  XLSX.utils.book_append_sheet(wb, XLSX.utils.json_to_sheet(data), "薪資核算總表");
-  XLSX.writeFile(wb, "居服員薪資核算總表.xlsx");
 }
 </script>
 
