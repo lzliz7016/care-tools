@@ -1254,7 +1254,7 @@ function renderDailyDetailTable() {
       if (work > 8.0) weekdayOt = (work - 8.0);
       if (day.dayOfWeek === 6) satH = work;
       if (day.dayOfWeek === 0) sunH = work;
-      statusBadge = `<button onclick="cycleDayStatus(${dIdx})" class="bg-slate-100 text-slate-700 border border-slate-300 hover:bg-teal-50 hover:text-teal-800 px-2.5 py-1 rounded transition">平日上班 (可切換)</button>`;
+      statusBadge = `<button onclick="cycleDayStatus(${dIdx})" class="bg-slate-100 text-slate-700 border border-slate-300 hover:bg-teal-50 hover:text-teal-800 px-2.5 py-1 rounded transition">平日上班</button>`;
     }
 
     const tr = document.createElement("tr");
