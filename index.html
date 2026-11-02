@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- 雙重規格 Favicon -->
   <link rel="icon" type="image/png" sizes="64x64" href="data:image/png;base64,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">
   <link rel="shortcut icon" type="image/png" href="data:image/png;base64,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">
   <title>居服中心整合作業平台</title>
@@ -11,7 +10,7 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- SheetJS CDN -->
   <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
-  <!-- ExcelJS CDN (用於高保真保留班表結構、上色與插入歸檔欄位) -->
+  <!-- ExcelJS CDN -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/exceljs/4.3.0/exceljs.min.js"></script>
   <!-- Font Awesome CDN -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -48,7 +47,7 @@
       justify-content: space-between;
       align-items: center;
     }
-    header h1 { font-size: 22px; font-weight: 700; }
+    header h1 { font-size: 22px; font-weight: 700; display: flex; align-items: center; gap: 10px; }
     header p { font-size: 13px; opacity: 0.9; margin-top: 4px; }
     .session-info {
       text-align: right;
@@ -59,7 +58,6 @@
     }
     .session-timer { font-size: 14px; font-weight: bold; color: #fef08a; }
 
-    /* 頂部頁籤切換導覽列 (三個模組) */
     .nav-tabs {
       display: flex;
       gap: 8px;
@@ -247,14 +245,12 @@
       font-size: 13.5px;
     }
 
-    /* 薪資模組自訂高亮樣式 */
     .has-cert-bg {
       background-color: #fef08a !important;
       color: #854d0e !important;
       font-weight: 700;
     }
 
-    /* 登入視窗與免責聲明整合設計 */
     .auth-overlay {
       position: fixed;
       top: 0; left: 0; right: 0; bottom: 0;
@@ -331,7 +327,7 @@
 </head>
 <body>
 
-<!-- 登入驗證視窗 (含免責條款與30分鐘計時) -->
+<!-- 登入驗證視窗 -->
 <div id="authOverlay" class="auth-overlay">
   <div class="auth-modal">
     <div class="auth-icon">🔐</div>
@@ -356,14 +352,12 @@
 </div>
 
 <div class="container">
- <!-- 把原本的 <h1> 改成加上圓形小頭像 -->
-<h1 style="display: flex; align-items: center; gap: 10px;">
-  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAIAAAAlC+aJAAAddElEQVR4nNV6aZAcx3Xme5lZVV19z3TPfc8AGGBwEicJkOAFkqJIkSJFMSRZR0j2rleK9bGhWCtWtsOSvV7FKuS1vDpCli3KkqiwdZAUKdEmRQkkBALESYCDc+776O7pu6vrymN/9MxgAFLnandjM3q6a7qzst733vcyX76X6Psu/IYN17z/Bk296eLXGBkBAEEpYAAIoEDVPtV1fd56BLUytLr+Gav3vvk2df33v0D0XzrUmh4KAIBd663UjX2Wn4tv6qBW4Knr8cCyOq7dXftSISDgzxP3Fwm5Zti3BsN+hXF+zoOvGUABgFIKlAIEREIoQyTXW0cpJaSQSklQAIiIeN1QNyoC4BdiXtHTKoVuJMb16nxL8WsSKKWUQoKaZtR+8H1RLVd9uyp8V0qulCKEMT2gBUw9aOqaXrudc09JhYjXLHzjsxQoXLG2+nkWwGtOrNbq+poaEGDN/dfgKVAgFdN1ROpzUVicLy5M2sUF8AsMXUoERU4oItWkkL4nfYESTNDigVhLrKWnrqVd14gCwT0Pgfw88VY+FQC5AQNeB2BFdrXqHdcawRqAWh9EAKWkrIleyCxlxi9WUldNvdzQHIrEg5qmocYk0LMvnFWS731wFwRDoJugJNhVcIVTtLOY..." style="width: 34px; height: 34px; border-radius: 50%; border: 2px solid #ffffff; box-shadow: 0 2px 6px rgba(0,0,0,0.2);">
-  <span>居服中心整合作業平台</span>
-</h1>
   <header>
     <div>
-      <h1>📋 居服中心整合作業平台</h1>
+      <h1>
+        <img src="data:image/png;base64,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" style="width: 34px; height: 34px; border-radius: 50%; border: 2px solid #ffffff; box-shadow: 0 2px 6px rgba(0,0,0,0.2);">
+        <span>📋 居服中心整合作業平台</span>
+      </h1>
       <p>薪資工時核算 · A碼獎勵金勾稽 · 督導紀錄內容管理</p>
     </div>
     <div class="session-info" id="sessionInfoBox" style="display: none;">
@@ -379,7 +373,7 @@
     <button class="tab-btn" onclick="switchMainTab('supervisorRecordModule')">📑 督導紀錄內容</button>
   </div>
 
-  <!-- ================= 模組一：薪資計算系統 (已完全整合居服員班表工時核算) ================= -->
+  <!-- ================= 模組一：薪資計算系統 ================= -->
   <div id="salaryModule" class="module-section active space-y-6">
 
     <!-- 頂部操作按鈕列 -->
@@ -414,7 +408,7 @@
       </div>
     </div>
 
-    <!-- 國定假日手動輸入與設定控制區 (日期從小到大排) -->
+    <!-- 國定假日手動輸入與設定控制區 -->
     <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-4 md:p-5">
       <div class="flex flex-col md:flex-row md:items-center justify-between gap-3 pb-3 border-b border-slate-100">
         <div class="flex items-center gap-2.5">
@@ -449,7 +443,7 @@
       </div>
     </div>
 
-    <!-- 1. 核心薪資時數統計總表 (職編由數字小到大排) -->
+    <!-- 1. 核心薪資時數統計總表 -->
     <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
       <div class="p-4 md:p-5 border-b border-slate-200 flex flex-col md:flex-row md:items-center justify-between gap-3 bg-slate-50/50">
         <div>
@@ -472,7 +466,7 @@
               <th class="py-3 px-2 whitespace-nowrap border-r border-slate-200 text-teal-800 font-bold" title="已自動由小到大排序">
                 職編 <i class="fa-solid fa-arrow-down-1-9 text-xs"></i>
               </th>
-              <th class="py-3 px-3 whitespace-nowrap border-r border-slate-200 cursor-pointer hover:bg-slate-200" title="點擊表頭說明：點擊下方居服員名字可反黃切換丙照">
+              <th class="py-3 px-3 whitespace-nowrap border-r border-slate-200 cursor-pointer hover:bg-slate-200" title="點擊下方居服員名字可反黃切換丙照">
                 居服員名 <i class="fa-solid fa-hand-pointer text-slate-400 text-xs ml-0.5"></i>
               </th>
               <th class="py-3 px-2 whitespace-nowrap border-r border-slate-200 bg-sky-50/50">
@@ -517,7 +511,7 @@
       </div>
     </div>
 
-    <!-- 居服員排休設定 & 每日班表對帳抽屜 (三段循環切換) -->
+    <!-- 居服員排休設定 & 每日班表對帳抽屜 -->
     <div id="staffDetailModal" class="bg-white rounded-2xl shadow-sm border border-slate-200 p-5 transition-all">
       <div class="flex flex-col md:flex-row md:items-center justify-between pb-4 border-b border-slate-200 gap-3">
         <div class="flex items-center gap-3">
@@ -582,7 +576,7 @@
       </div>
     </div>
 
-    <!-- 2. 排班超時警示 (休息日/國假>8小時，平日>10小時：置於最下方) -->
+    <!-- 2. 排班超時警示 -->
     <div id="overtimeAlertSection" class="bg-white rounded-2xl shadow-sm border border-rose-200 overflow-hidden">
       <div class="p-4 bg-rose-50 border-b border-rose-200 flex flex-col md:flex-row md:items-center justify-between gap-3">
         <div class="flex items-center gap-2.5">
@@ -594,7 +588,7 @@
               排班超時警示清單 (休息日／國假 &gt; 8小時，平日 &gt; 10小時)
               <span id="overtimeBadgeCount" class="bg-rose-600 text-white text-xs px-2 py-0.5 rounded-full font-mono">0 件</span>
             </h2>
-            <p class="text-xs text-rose-700 mt-0.5">系統自動檢核：① 休息日／國定假日排班＋轉場 &gt; 8小時；② 平日排班＋轉場 &gt; 10小時。匯出 Excel 時將<b></b> 生成「排班超時明細」總表。</p>
+            <p class="text-xs text-rose-700 mt-0.5">系統自動檢核：① 休息日／國定假日排班＋轉場 &gt; 8小時；② 平日排班＋轉場 &gt; 10小時。匯出 Excel 時將生成「排班超時明細」總表。</p>
           </div>
         </div>
       </div>
@@ -871,7 +865,6 @@ document.addEventListener('copy', (e) => {
   }
 });
 
-// ================= 分頁切換邏輯 =================
 function switchMainTab(moduleId) {
   document.querySelectorAll('.module-section').forEach(m => m.classList.remove('active'));
   document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
@@ -907,62 +900,55 @@ let holidaysList = [
 ];
 
 let activeStaffIndex = 0;
-let staffList = []; // 預設名冊清空，等待匯入
+let staffList = [];
 
-// 無條件進位到小數點第二位 (避免浮點數微小誤差)
-    function ceil2(val) {
-      if (!val || isNaN(val)) return 0;
-      return Math.ceil(Math.round(val * 1000000) / 10000) / 100;
-    }
+function ceil2(val) {
+  if (!val || isNaN(val)) return 0;
+  return Math.ceil(Math.round(val * 1000000) / 10000) / 100;
+}
 
-      // 時間解析函式：依督導手算規則精確對應小數兩位
-   // 時間解析函式：依督導手算規則精確對應小數兩位
-    function parseTimeToHours(text) {
-      if (!text && text !== 0) return 0;
-      if (typeof text === 'number') return Math.round(text * 100) / 100;
-      
-      const str = String(text).trim();
-      if (!str || str === '0' || str === '-') return 0;
+function parseTimeToHours(text) {
+  if (!text && text !== 0) return 0;
+  if (typeof text === 'number') return Math.round(text * 100) / 100;
+  
+  const str = String(text).trim();
+  if (!str || str === '0' || str === '-') return 0;
 
-      // 優先抓取班表括號內原數值，如 (170.75時)、(37.08時)
-      const matchParenDec = str.match(/\(\s*([\d\.]+)\s*(?:時)?\s*\)/);
-      if (matchParenDec) {
-        return parseFloat(matchParenDec[1]);
-      }
+  const matchParenDec = str.match(/\(\s*([\d\.]+)\s*(?:時)?\s*\)/);
+  if (matchParenDec) {
+    return parseFloat(matchParenDec[1]);
+  }
 
-      // 匹配 "X時Y分"
-      const matchHourMin = str.match(/(\d+)\s*(?:時|小時|:)\s*(\d+)?(?:\s*分)?/);
-      if (matchHourMin) {
-        const hours = parseInt(matchHourMin[1], 10) || 0;
-        const minutes = parseInt(matchHourMin[2], 10) || 0;
-        return hours + minutesToDecimal(minutes);
-      }
+  const matchHourMin = str.match(/(\d+)\s*(?:時|小時|:)\s*(\d+)?(?:\s*分)?/);
+  if (matchHourMin) {
+    const hours = parseInt(matchHourMin[1], 10) || 0;
+    const minutes = parseInt(matchHourMin[2], 10) || 0;
+    return hours + minutesToDecimal(minutes);
+  }
 
-      // 匹配純分鐘 "40分"
-      const matchMinOnly = str.match(/^(\d+)\s*分$/);
-      if (matchMinOnly) {
-        return minutesToDecimal(parseInt(matchMinOnly[1], 10) || 0);
-      }
+  const matchMinOnly = str.match(/^(\d+)\s*分$/);
+  if (matchMinOnly) {
+    return minutesToDecimal(parseInt(matchMinOnly[1], 10) || 0);
+  }
 
-      const parsedFloat = parseFloat(str);
-      return isNaN(parsedFloat) ? 0 : Math.round(parsedFloat * 100) / 100;
-    }
+  const parsedFloat = parseFloat(str);
+  return isNaN(parsedFloat) ? 0 : Math.round(parsedFloat * 100) / 100;
+}
 
-    // 分鐘換算小數規則（精確符合 10分=0.16、40分=0.66、5分=0.08、50分=0.83、35分=0.58）
-    function minutesToDecimal(min) {
-      if (!min) return 0;
-      if (min === 40) return 0.66;
-      if (min === 10) return 0.16;
-      if (min === 5) return 0.08;
-      if (min === 50) return 0.83;
-      if (min === 35) return 0.58;
-      if (min === 15) return 0.25;
-      if (min === 30) return 0.50;
-      if (min === 45) return 0.75;
-      if (min === 20) return 0.33;
-      if (min === 25) return 0.42;
-      return Math.round((min / 60) * 100) / 100;
-    }
+function minutesToDecimal(min) {
+  if (!min) return 0;
+  if (min === 40) return 0.66;
+  if (min === 10) return 0.16;
+  if (min === 5) return 0.08;
+  if (min === 50) return 0.83;
+  if (min === 35) return 0.58;
+  if (min === 15) return 0.25;
+  if (min === 30) return 0.50;
+  if (min === 45) return 0.75;
+  if (min === 20) return 0.33;
+  if (min === 25) return 0.42;
+  return Math.round((min / 60) * 100) / 100;
+}
 
 function generateDaysOfMonth(yearMonthStr) {
   const [year, month] = yearMonthStr.split('-').map(Number);
@@ -1031,6 +1017,15 @@ function resolveDayStatus(staff, day) {
   if (isRoutineOff) return 'routine';
 
   return 'weekday';
+}
+
+function formatHoursToChinese(h) {
+  if (!h || isNaN(h)) return "0分";
+  const hours = Math.floor(h);
+  const minutes = Math.round((h - hours) * 60);
+  if (hours > 0 && minutes > 0) return `${hours}時${minutes}分`;
+  if (hours > 0) return `${hours}時`;
+  return `${minutes}分`;
 }
 
 function getOvertimeViolationList() {
@@ -1139,6 +1134,55 @@ function renderOvertimeAlerts() {
     `;
     tbody.appendChild(tr);
   });
+}
+
+function calculateStaffPayroll(staff) {
+  let weekdayOvertime = 0;
+  let restDay1_2 = 0;
+  let restDay3_8 = 0;
+  let satHours = 0;
+  let sunHours = 0;
+  let holidayTotal = 0;
+  let holidayTransitDeducted = 0;
+
+  staff.days.forEach(day => {
+    const status = resolveDayStatus(staff, day);
+    const work = day.workHours || 0;
+    const transit = day.transitHours || 0;
+
+    if (status === 'holiday') {
+      holidayTotal += (work + transit);
+      holidayTransitDeducted += transit;
+    } else if (status === 'rest') {
+      if (work > 0) {
+        restDay1_2 += Math.min(work, 2.0);
+        restDay3_8 += Math.max(0, work - 2.0);
+      }
+    } else if (status === 'weekday') {
+      if (work > 8.0) {
+        weekdayOvertime += Math.min(2.0, work - 8.0);
+      }
+      if (day.dayOfWeek === 6) satHours += work;
+      if (day.dayOfWeek === 0) sunHours += work;
+    }
+  });
+
+  const totalScheduleHours = staff.sheetTotalHours > 0 ? staff.sheetTotalHours : staff.days.reduce((a, b) => a + (b.workHours || 0), 0);
+  const adjustedTransitHours = Math.max(0, staff.sheetTransitHours - holidayTransitDeducted);
+  const certBonus = (staff.hasCert && totalScheduleHours >= 120) ? 1000 : 0;
+
+  return {
+    totalScheduleHours: ceil2(totalScheduleHours),
+    adjustedTransitHours: ceil2(adjustedTransitHours),
+    holidayTransitDeducted: ceil2(holidayTransitDeducted),
+    certBonus: certBonus,
+    weekdayOvertime: ceil2(weekdayOvertime),
+    restDay1_2: ceil2(restDay1_2),
+    restDay3_8: ceil2(restDay3_8),
+    satHours: ceil2(satHours),
+    sunHours: ceil2(sunHours),
+    holidayTotal: ceil2(holidayTotal)
+  };
 }
 
 function renderPayrollTable() {
@@ -1268,17 +1312,17 @@ function renderDailyDetailTable() {
 
     if (status === 'holiday') {
       holH = work + transit;
-      statusBadge = `<button onclick="cycleDayStatus(${dIdx})" class="bg-rose-100 text-rose-800 border border-rose-300 hover:bg-rose-200 px-2.5 py-1 rounded font-bold transition">國定假日 </button>`;
+      statusBadge = `<button onclick="cycleDayStatus(${dIdx})" class="bg-rose-100 text-rose-800 border border-rose-300 hover:bg-rose-200 px-2.5 py-1 rounded font-bold transition">國定假日</button>`;
       rowClass = "bg-rose-50/40";
     } else if (status === 'rest') {
       if (work > 0) {
         r1_2 = Math.min(work, 2.0);
         r3_8 = Math.max(0, work - 2.0);
       }
-      statusBadge = `<button onclick="cycleDayStatus(${dIdx})" class="bg-amber-100 text-amber-900 border border-amber-300 hover:bg-amber-200 px-2.5 py-1 rounded font-bold transition">休息日 </button>`;
+      statusBadge = `<button onclick="cycleDayStatus(${dIdx})" class="bg-amber-100 text-amber-900 border border-amber-300 hover:bg-amber-200 px-2.5 py-1 rounded font-bold transition">休息日</button>`;
       rowClass = "bg-amber-50/30";
     } else if (status === 'routine') {
-      statusBadge = `<button onclick="cycleDayStatus(${dIdx})" class="bg-indigo-100 text-indigo-900 border border-indigo-300 hover:bg-indigo-200 px-2.5 py-1 rounded font-bold transition">例假日 </button>`;
+      statusBadge = `<button onclick="cycleDayStatus(${dIdx})" class="bg-indigo-100 text-indigo-900 border border-indigo-300 hover:bg-indigo-200 px-2.5 py-1 rounded font-bold transition">例假日</button>`;
       rowClass = "bg-indigo-50/20";
     } else {
       if (work > 8.0) weekdayOt = (work - 8.0);
@@ -1420,7 +1464,6 @@ document.getElementById("excelFileInput").addEventListener("change", function(e)
   reader.readAsArrayBuffer(file);
 });
 
-// 完美回填 Excel 並全格上色（休息日黃色、國假淡橘色）
 async function downloadArchivedScheduleExcel() {
   if (staffList.length === 0) {
     showToast("目前沒有可歸檔的居服員資料，請先匯入班表！");
@@ -1439,7 +1482,6 @@ async function downloadArchivedScheduleExcel() {
       return;
     }
 
-    // 1. 在活頁本最前面建立「排班超時明細」總表分頁
     const violations = getOvertimeViolationList();
     const oldSheet = workbook.getWorksheet("排班超時明細");
     if (oldSheet) {
@@ -1448,7 +1490,6 @@ async function downloadArchivedScheduleExcel() {
 
     const alertSheet = workbook.addWorksheet("排班超時明細");
     
-    // 確保超時明細移至第一張工作表
     if (workbook.worksheets.length > 1) {
       const sIdx = workbook.worksheets.indexOf(alertSheet);
       if (sIdx > -1) {
@@ -1538,7 +1579,6 @@ async function downloadArchivedScheduleExcel() {
       });
     }
 
-    // 2. 居服員個別分頁處理
     sortHolidaysList();
     const holidayDatesShort = holidaysList.map(h => {
       const parts = h.date.split('-');
@@ -1580,56 +1620,53 @@ async function downloadArchivedScheduleExcel() {
         });
       });
 
-      // 修正後的精準著色邏輯：嚴格精確匹配當月 1~31 號，排除服務時間(如 10:15)，避免誤判全黃
-          const yellowRestFill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FFFFEB3B' } }; // 休息日：明亮黃色
-          const orangeHolidayFill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FFFFA726' } }; // 國定假日：淡橘色
+      const yellowRestFill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FFFFEB3B' } };
+      const orangeHolidayFill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FFFFA726' } };
 
-          let started = false;
-          let expectedDay = 1;
-          const maxDays = matchedStaff.days.length; // 當月總天數 (例如 31)
+      let started = false;
+      let expectedDay = 1;
+      const maxDays = matchedStaff.days.length;
 
-          // 只在班表日曆列（第 5, 7, 9, 11, 13 列）定位日期
-          worksheet.eachRow((row, rowNumber) => {
-            if (rowNumber >= 5 && (summaryRowIdx === -1 || rowNumber < summaryRowIdx)) {
-              row.eachCell((cell, colNumber) => {
-                const cellText = String(cell.value || "").trim();
-                // 必須是數字開頭，且緊接著換行或括號，嚴格排除冒號 (如 10:15~11:30)
-                const dateMatch = cellText.match(/^([1-3]?[0-9])(?:\s*\(|\s*$|\n)/);
-                if (dateMatch) {
-                  const d = parseInt(dateMatch[1], 10);
-                  if (!started) {
-                    if (d === 1) {
-                      started = true;
-                      expectedDay = 2;
-                      applyDayColor(d, rowNumber, colNumber);
-                    }
-                  } else {
-                    if (d === expectedDay && d <= maxDays) {
-                      expectedDay++;
-                      applyDayColor(d, rowNumber, colNumber);
-                    }
-                  }
+      worksheet.eachRow((row, rowNumber) => {
+        if (rowNumber >= 5 && (summaryRowIdx === -1 || rowNumber < summaryRowIdx)) {
+          row.eachCell((cell, colNumber) => {
+            const cellText = String(cell.value || "").trim();
+            const dateMatch = cellText.match(/^([1-3]?[0-9])(?:\s*\(|\s*$|\n)/);
+            if (dateMatch) {
+              const d = parseInt(dateMatch[1], 10);
+              if (!started) {
+                if (d === 1) {
+                  started = true;
+                  expectedDay = 2;
+                  applyDayColor(d, rowNumber, colNumber);
                 }
-              });
+              } else {
+                if (d === expectedDay && d <= maxDays) {
+                  expectedDay++;
+                  applyDayColor(d, rowNumber, colNumber);
+                }
+              }
             }
           });
+        }
+      });
 
-          // 著色輔助函式：只上色當天日期格與下方排班格，平日保持原白底
-          function applyDayColor(dayNum, rNum, cNum) {
-            const dayObj = matchedStaff.days.find(d => d.day === dayNum);
-            if (!dayObj) return;
-            const status = resolveDayStatus(matchedStaff, dayObj);
+      function applyDayColor(dayNum, rNum, cNum) {
+        const dayObj = matchedStaff.days.find(d => d.day === dayNum);
+        if (!dayObj) return;
+        const status = resolveDayStatus(matchedStaff, dayObj);
 
-            if (status === 'rest') {
-              worksheet.getRow(rNum).getCell(cNum).fill = yellowRestFill;
-              const nextRow = worksheet.getRow(rNum + 1);
-              if (nextRow) nextRow.getCell(cNum).fill = yellowRestFill;
-            } else if (status === 'holiday') {
-              worksheet.getRow(rNum).getCell(cNum).fill = orangeHolidayFill;
-              const nextRow = worksheet.getRow(rNum + 1);
-              if (nextRow) nextRow.getCell(cNum).fill = orangeHolidayFill;
-            }
-          }
+        if (status === 'rest') {
+          worksheet.getRow(rNum).getCell(cNum).fill = yellowRestFill;
+          const nextRow = worksheet.getRow(rNum + 1);
+          if (nextRow) nextRow.getCell(cNum).fill = yellowRestFill;
+        } else if (status === 'holiday') {
+          worksheet.getRow(rNum).getCell(cNum).fill = orangeHolidayFill;
+          const nextRow = worksheet.getRow(rNum + 1);
+          if (nextRow) nextRow.getCell(cNum).fill = orangeHolidayFill;
+        }
+      }
+
       const insertAtRow = summaryRowIdx > 0 ? summaryRowIdx : 15;
 
       let needInsert = true;
@@ -1795,47 +1832,32 @@ function parseWorkbook(workbook) {
     for (let r = jsonRows.length - 1; r >= Math.max(0, jsonRows.length - 10); r--) {
       const row = jsonRows[r] || [];
       for (let c = 0; c < row.length; c++) {
-        const cellVal = String(row[c]).trim();
+        const cellVal = String(row[c] || "").trim();
+
         if (cellVal.includes("預排總時數")) {
-          // 精確解析底部的「預排總時數」與「轉場總時數」，完整抓取時分或括號內小數並無條件進位
-        for (let r = jsonRows.length - 1; r >= Math.max(0, jsonRows.length - 10); r--) {
-          const row = jsonRows[r] || [];
-          for (let c = 0; c < row.length; c++) {
-            const cellVal = String(row[c] || "").trim();
-
-            if (cellVal.includes("預排總時數")) {
-              // 檢查同格、右邊第一格或右邊第二格
-              const candidates = [row[c + 2], row[c + 1], cellVal];
-              for (let cand of candidates) {
-                if (cand) {
-                  const parsed = parseTimeToHours(cand);
-                  if (parsed > 0) {
-                    sheetTotalHours = parsed;
-                    break;
-                  }
-                }
-              }
-            }
-
-            if (cellVal.includes("轉場總時數")) {
-              const candidates = [row[c + 2], row[c + 1], cellVal];
-              for (let cand of candidates) {
-                if (cand) {
-                  const parsed = parseTimeToHours(cand);
-                  if (parsed > 0) {
-                    sheetTransitHours = parsed;
-                    break;
-                  }
-                }
+          const candidates = [row[c + 2], row[c + 1], cellVal];
+          for (let cand of candidates) {
+            if (cand) {
+              const parsed = parseTimeToHours(cand);
+              if (parsed > 0) {
+                sheetTotalHours = parsed;
+                break;
               }
             }
           }
         }
-        }
+
         if (cellVal.includes("轉場總時數")) {
-          const neighborVal = row[c + 1] || "";
-          const matchDec = String(neighborVal).match(/([\d\.]+)/) || cellVal.match(/([\d\.]+)/);
-          if (matchDec) sheetTransitHours = parseFloat(matchDec[1]);
+          const candidates = [row[c + 2], row[c + 1], cellVal];
+          for (let cand of candidates) {
+            if (cand) {
+              const parsed = parseTimeToHours(cand);
+              if (parsed > 0) {
+                sheetTransitHours = parsed;
+                break;
+              }
+            }
+          }
         }
       }
     }
@@ -1855,7 +1877,6 @@ function parseWorkbook(workbook) {
             dayObj.workHoursText = workStr;
             dayObj.workHours = parseTimeToHours(workStr);
 
-            // 轉場時間可能在同一個儲存格換行處 (如 "7 (8時10分)\n(2時15分)")，或在下一列
             let foundTransit = false;
             const lines = cellText.split('\n');
             for (let l = 1; l < lines.length; l++) {
@@ -1905,7 +1926,7 @@ function parseWorkbook(workbook) {
 
   if (newStaffList.length > 0) {
     staffList = newStaffList;
-    sortStaffList(); // 匯入後強制自動依職編從小到大排序
+    sortStaffList();
     activeStaffIndex = 0;
     renderPayrollTable();
     renderDailyDetailTable();
@@ -1913,47 +1934,6 @@ function parseWorkbook(workbook) {
   } else {
     showToast("未能辨識出居服員班表資料，請確認格式。");
   }
-}
-
-// 規則 1: 班表總工時 = 「預排總時數」
-      const totalScheduleHours = staff.sheetTotalHours > 0 ? staff.sheetTotalHours : staff.days.reduce((a, b) => a + (b.workHours || 0), 0);
-
-      // 規則 2: 班表右下角轉場 - 當月國假當天轉場 (精確扣除 2.82 得到 34.26)
-      holidayTransitDeducted = Math.round(holidayTransitDeducted * 100) / 100;
-      const adjustedTransitHours = Math.round(Math.max(0, staff.sheetTransitHours - holidayTransitDeducted) * 100) / 100;
-
-      // 規則 4: 丙照費 (工時 >= 120 給 1000)
-      const certBonus = (staff.hasCert && totalScheduleHours >= 120) ? 1000 : 0;
-
-      return {
-        totalScheduleHours: Math.round(totalScheduleHours * 100) / 100,
-        adjustedTransitHours: adjustedTransitHours,
-        holidayTransitDeducted: holidayTransitDeducted,
-        certBonus: certBonus,
-        weekdayOvertime: Math.round(weekdayOvertime * 100) / 100,
-        restDay1_2: Math.round(restDay1_2 * 100) / 100,
-        restDay3_8: Math.round(restDay3_8 * 100) / 100,
-        satHours: Math.round(satHours * 100) / 100,
-        sunHours: Math.round(sunHours * 100) / 100,
-        holidayTotal: Math.round(holidayTotal * 100) / 100
-      };
-
-  const totalScheduleHours = staff.sheetTotalHours > 0 ? staff.sheetTotalHours : staff.days.reduce((a, b) => a + (b.workHours || 0), 0);
-  const adjustedTransitHours = Math.max(0, staff.sheetTransitHours - holidayTransitDeducted);
-  const certBonus = (staff.hasCert && totalScheduleHours >= 120) ? 1000 : 0;
-
-  return {
-        totalScheduleHours: ceil2(totalScheduleHours),
-        adjustedTransitHours: ceil2(adjustedTransitHours),
-        holidayTransitDeducted: ceil2(holidayTransitDeducted),
-        certBonus: certBonus,
-        weekdayOvertime: ceil2(weekdayOvertime),
-        restDay1_2: ceil2(restDay1_2),
-        restDay3_8: ceil2(restDay3_8),
-        satHours: ceil2(satHours),
-        sunHours: ceil2(sunHours),
-        holidayTotal: ceil2(holidayTotal)
-      };
 }
 
 function exportResultExcel() {
@@ -2249,7 +2229,6 @@ function renderAll() {
   });
 }
 
-// 輔助函式
 function showToast(msg) {
   const t = document.getElementById('toast');
   t.innerText = msg;
