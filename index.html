@@ -915,8 +915,8 @@ let staffList = []; // 預設名冊清空，等待匯入
       return Math.ceil(Math.round(val * 1000000) / 10000) / 100;
     }
 
-    // 時間解析函式：全數採用【無條件進位至小數點第二位】
-    // 時間解析函式：依督導手算規則精確對應小數兩位
+      // 時間解析函式：依督導手算規則精確對應小數兩位
+   // 時間解析函式：依督導手算規則精確對應小數兩位
     function parseTimeToHours(text) {
       if (!text && text !== 0) return 0;
       if (typeof text === 'number') return Math.round(text * 100) / 100;
@@ -963,15 +963,6 @@ let staffList = []; // 預設名冊清空，等待匯入
       if (min === 25) return 0.42;
       return Math.round((min / 60) * 100) / 100;
     }
-function formatHoursToChinese(hours) {
-  if (!hours || hours <= 0) return "0分";
-  const totalMin = Math.round(hours * 60);
-  const h = Math.floor(totalMin / 60);
-  const m = totalMin % 60;
-  if (h === 0) return `${m}分`;
-  if (m === 0) return `${h}時`;
-  return `${h}時${m}分`;
-}
 
 function generateDaysOfMonth(yearMonthStr) {
   const [year, month] = yearMonthStr.split('-').map(Number);
