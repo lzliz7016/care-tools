@@ -1924,44 +1924,28 @@ function parseWorkbook(workbook) {
   }
 }
 
-function calculateStaffPayroll(staff) {
-  let holidayTotal = 0;
-  let holidayTransitDeducted = 0;
-  let weekdayOvertime = 0;
-  let restDay1_2 = 0;
-  let restDay3_8 = 0;
-  let satHours = 0;
-  let sunHours = 0;
+// 規則 1: 班表總工時 = 「預排總時數」
+      const totalScheduleHours = staff.sheetTotalHours > 0 ? staff.sheetTotalHours : staff.days.reduce((a, b) => a + (b.workHours || 0), 0);
 
-  staff.days.forEach(day => {
-    const status = resolveDayStatus(staff, day);
-    const work = day.workHours || 0;
-    const transit = day.transitHours || 0;
+      // 規則 2: 班表右下角轉場 - 當月國假當天轉場 (精確扣除 2.82 得到 34.26)
+      holidayTransitDeducted = Math.round(holidayTransitDeducted * 100) / 100;
+      const adjustedTransitHours = Math.round(Math.max(0, staff.sheetTransitHours - holidayTransitDeducted) * 100) / 100;
 
-    if (status === 'holiday') {
-      holidayTotal += (work + transit);
-      holidayTransitDeducted += transit;
-    } else if (status === 'rest') {
-      if (work > 0) {
-        restDay1_2 += Math.min(work, 2.0);
-        if (work > 2.0) {
-          restDay3_8 += (work - 2.0);
-        }
-      }
-    } else if (status === 'routine') {
-      // 例假日
-    } else {
-      if (work > 8.0) {
-        weekdayOvertime += (work - 8.0);
-      }
-      if (day.dayOfWeek === 6) {
-        satHours += work;
-      }
-      if (day.dayOfWeek === 0) {
-        sunHours += work;
-      }
-    }
-  });
+      // 規則 4: 丙照費 (工時 >= 120 給 1000)
+      const certBonus = (staff.hasCert && totalScheduleHours >= 120) ? 1000 : 0;
+
+      return {
+        totalScheduleHours: Math.round(totalScheduleHours * 100) / 100,
+        adjustedTransitHours: adjustedTransitHours,
+        holidayTransitDeducted: holidayTransitDeducted,
+        certBonus: certBonus,
+        weekdayOvertime: Math.round(weekdayOvertime * 100) / 100,
+        restDay1_2: Math.round(restDay1_2 * 100) / 100,
+        restDay3_8: Math.round(restDay3_8 * 100) / 100,
+        satHours: Math.round(satHours * 100) / 100,
+        sunHours: Math.round(sunHours * 100) / 100,
+        holidayTotal: Math.round(holidayTotal * 100) / 100
+      };
 
   const totalScheduleHours = staff.sheetTotalHours > 0 ? staff.sheetTotalHours : staff.days.reduce((a, b) => a + (b.workHours || 0), 0);
   const adjustedTransitHours = Math.max(0, staff.sheetTransitHours - holidayTransitDeducted);
