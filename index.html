@@ -1790,9 +1790,40 @@ function parseWorkbook(workbook) {
       for (let c = 0; c < row.length; c++) {
         const cellVal = String(row[c]).trim();
         if (cellVal.includes("預排總時數")) {
-          const neighborVal = row[c + 1] || "";
-          const matchDec = String(neighborVal).match(/([\d\.]+)/) || cellVal.match(/([\d\.]+)/);
-          if (matchDec) sheetTotalHours = parseFloat(matchDec[1]);
+          // 精確解析底部的「預排總時數」與「轉場總時數」，完整抓取時分或括號內小數並無條件進位
+        for (let r = jsonRows.length - 1; r >= Math.max(0, jsonRows.length - 10); r--) {
+          const row = jsonRows[r] || [];
+          for (let c = 0; c < row.length; c++) {
+            const cellVal = String(row[c] || "").trim();
+
+            if (cellVal.includes("預排總時數")) {
+              // 檢查同格、右邊第一格或右邊第二格
+              const candidates = [row[c + 2], row[c + 1], cellVal];
+              for (let cand of candidates) {
+                if (cand) {
+                  const parsed = parseTimeToHours(cand);
+                  if (parsed > 0) {
+                    sheetTotalHours = parsed;
+                    break;
+                  }
+                }
+              }
+            }
+
+            if (cellVal.includes("轉場總時數")) {
+              const candidates = [row[c + 2], row[c + 1], cellVal];
+              for (let cand of candidates) {
+                if (cand) {
+                  const parsed = parseTimeToHours(cand);
+                  if (parsed > 0) {
+                    sheetTransitHours = parsed;
+                    break;
+                  }
+                }
+              }
+            }
+          }
+        }
         }
         if (cellVal.includes("轉場總時數")) {
           const neighborVal = row[c + 1] || "";
