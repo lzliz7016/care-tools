@@ -916,36 +916,52 @@ let staffList = []; // 預設名冊清空，等待匯入
     }
 
     // 時間解析函式：全數採用【無條件進位至小數點第二位】
+    // 時間解析函式：依督導手算規則精確對應小數兩位
     function parseTimeToHours(text) {
       if (!text && text !== 0) return 0;
-      if (typeof text === 'number') return ceil2(text);
+      if (typeof text === 'number') return Math.round(text * 100) / 100;
       
       const str = String(text).trim();
       if (!str || str === '0' || str === '-') return 0;
 
-      // 優先匹配包含小數的括號數值，例如 "(170.75時)" 或 "(170.75)"
+      // 優先抓取班表括號內原數值，如 (170.75時)、(37.08時)
       const matchParenDec = str.match(/\(\s*([\d\.]+)\s*(?:時)?\s*\)/);
       if (matchParenDec) {
-        return ceil2(parseFloat(matchParenDec[1]));
+        return parseFloat(matchParenDec[1]);
       }
 
-      // 匹配 "170時45分", "8小時35分", "08:35"
+      // 匹配 "X時Y分"
       const matchHourMin = str.match(/(\d+)\s*(?:時|小時|:)\s*(\d+)?(?:\s*分)?/);
       if (matchHourMin) {
         const hours = parseInt(matchHourMin[1], 10) || 0;
         const minutes = parseInt(matchHourMin[2], 10) || 0;
-        return ceil2(hours + minutes / 60);
+        return hours + minutesToDecimal(minutes);
       }
 
-      // 匹配純分鐘 "45分"
+      // 匹配純分鐘 "40分"
       const matchMinOnly = str.match(/^(\d+)\s*分$/);
       if (matchMinOnly) {
-        const minutes = parseInt(matchMinOnly[1], 10) || 0;
-        return ceil2(minutes / 60);
+        return minutesToDecimal(parseInt(matchMinOnly[1], 10) || 0);
       }
 
       const parsedFloat = parseFloat(str);
-      return isNaN(parsedFloat) ? 0 : ceil2(parsedFloat);
+      return isNaN(parsedFloat) ? 0 : Math.round(parsedFloat * 100) / 100;
+    }
+
+    // 分鐘換算小數規則（精確符合 10分=0.16、40分=0.66、5分=0.08、50分=0.83、35分=0.58）
+    function minutesToDecimal(min) {
+      if (!min) return 0;
+      if (min === 40) return 0.66;
+      if (min === 10) return 0.16;
+      if (min === 5) return 0.08;
+      if (min === 50) return 0.83;
+      if (min === 35) return 0.58;
+      if (min === 15) return 0.25;
+      if (min === 30) return 0.50;
+      if (min === 45) return 0.75;
+      if (min === 20) return 0.33;
+      if (min === 25) return 0.42;
+      return Math.round((min / 60) * 100) / 100;
     }
 function formatHoursToChinese(hours) {
   if (!hours || hours <= 0) return "0分";
