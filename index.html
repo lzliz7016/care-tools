@@ -719,8 +719,8 @@
 <script>
 // ================= 專屬督導密碼庫 =================
 const SUPERVISOR_PASSWORDS = {
-  "w888": "汪俐慈",
-  "0423": "陳雅慈",
+  "wang888": "汪俐慈",
+  "ya777": "陳雅慈",
   "qin666": "陳曉琴",
   "shuang555": "林逸双",
   "hua333": "余念樺",
@@ -922,7 +922,7 @@ function minutesToDecimal(min) {
   return Math.round((min / 60) * 100) / 100;
 }
 
-// 解析「X小時Y分」、「X:Y」、「Y分」等格式
+// 全面升級：精準擷取「排班時數」與「轉場時數」（支援括號小數、時分與純小數）
 function parseTimeToHours(text) {
   if (!text && text !== 0) return 0;
   if (typeof text === 'number') return Math.round(text * 100) / 100;
@@ -930,23 +930,36 @@ function parseTimeToHours(text) {
   const str = String(text).trim();
   if (!str || str === '0' || str === '-') return 0;
 
-  // 優先檢查純時分格式，以符合自訂分鐘對照表（例如 40分、10分）
-  const matchHourMin = str.match(/(\d+)\s*(?:時|小時|:)\s*(\d+)?(?:\s*分)?/);
+  // 1. 若含有括號內小數點 (如 "(170.75時)", "(170.75)", "(34.26)") 優先抓出
+  const matchParenDec = str.match(/\(\s*([0-9]+\.[0-9]+)\s*(?:時)?\s*\)/);
+  if (matchParenDec) {
+    return parseFloat(matchParenDec[1]);
+  }
+
+  // 2. 匹配中文「時分」：例如 "163時40分"、"8小時10分"、"8:40"
+  const matchHourMin = str.match(/(\d+)\s*(?:時|小時|:)\s*(\d+)\s*(?:分)?/);
   if (matchHourMin) {
     const hours = parseInt(matchHourMin[1], 10) || 0;
     const minutes = parseInt(matchHourMin[2], 10) || 0;
     return Math.round((hours + minutesToDecimal(minutes)) * 100) / 100;
   }
 
-  const matchMinOnly = str.match(/^(\d+)\s*分$/);
+  // 3. 匹配純分鐘：例如 "40分"
+  const matchMinOnly = str.match(/(\d+)\s*分/);
   if (matchMinOnly) {
     return minutesToDecimal(parseInt(matchMinOnly[1], 10) || 0);
   }
 
-  // 匹配括號內已換算好的小數值 (如 170.75時)
-  const matchParenDec = str.match(/\(\s*([\d\.]+)\s*(?:時)?\s*\)/);
-  if (matchParenDec) {
-    return parseFloat(matchParenDec[1]);
+  // 4. 匹配純時數「X時」或「X小時」（無分鐘）
+  const matchHourOnly = str.match(/(\d+)\s*(?:時|小時)/);
+  if (matchHourOnly) {
+    return parseInt(matchHourOnly[1], 10);
+  }
+
+  // 5. 抓取直接帶有小數點的浮點數，如 "163.66"
+  const matchDec = str.match(/(\d+\.\d+)/);
+  if (matchDec) {
+    return parseFloat(matchDec[1]);
   }
 
   const parsedFloat = parseFloat(str);
@@ -1027,7 +1040,6 @@ function formatHoursToChinese(h) {
   const hours = Math.floor(h);
   const decimal = Math.round((h - hours) * 100) / 100;
   
-  // 反查指定的分鐘對照
   const decMap = {
     0.17: 10, 0.25: 15, 0.33: 20, 0.42: 25, 0.50: 30,
     0.58: 35, 0.66: 40, 0.75: 45, 0.83: 50, 0.92: 55, 1.00: 60
@@ -1822,6 +1834,7 @@ function parseWorkbook(workbook) {
     let sheetTotalHours = 0;
     let sheetTransitHours = 0;
 
+    // 抓取表頭資料
     for (let r = 0; r < Math.min(6, jsonRows.length); r++) {
       const rowStr = (jsonRows[r] || []).join(" ");
       const nameMatch = rowStr.match(/員工\s*([^\s\d]+)/);
@@ -1840,13 +1853,14 @@ function parseWorkbook(workbook) {
       }
     }
 
-    for (let r = jsonRows.length - 1; r >= Math.max(0, jsonRows.length - 10); r--) {
+    // 底部精確比對「預排總時數」與「轉場總時數」
+    for (let r = jsonRows.length - 1; r >= Math.max(0, jsonRows.length - 12); r--) {
       const row = jsonRows[r] || [];
       for (let c = 0; c < row.length; c++) {
         const cellVal = String(row[c] || "").trim();
 
         if (cellVal.includes("預排總時數")) {
-          const candidates = [row[c + 2], row[c + 1], cellVal];
+          const candidates = [row[c + 1], row[c + 2], cellVal];
           for (let cand of candidates) {
             if (cand) {
               const parsed = parseTimeToHours(cand);
@@ -1859,7 +1873,7 @@ function parseWorkbook(workbook) {
         }
 
         if (cellVal.includes("轉場總時數")) {
-          const candidates = [row[c + 2], row[c + 1], cellVal];
+          const candidates = [row[c + 1], row[c + 2], cellVal];
           for (let cand of candidates) {
             if (cand) {
               const parsed = parseTimeToHours(cand);
@@ -1875,6 +1889,7 @@ function parseWorkbook(workbook) {
 
     const days = generateDaysOfMonth(yearMonthFound);
     
+    // 解析每日排班時數與轉場時數
     for (let r = 0; r < jsonRows.length; r++) {
       const row = jsonRows[r] || [];
       for (let c = 0; c < row.length; c++) {
@@ -1913,6 +1928,7 @@ function parseWorkbook(workbook) {
       }
     }
 
+    // 若底部沒讀到完整總數，直接由每日加總自動產出，絕對不漏小數！
     if (sheetTotalHours === 0) {
       const sumW = days.reduce((acc, cur) => acc + (cur.workHours || 0), 0);
       sheetTotalHours = Math.round(sumW * 100) / 100;
