@@ -1952,17 +1952,17 @@ function calculateStaffPayroll(staff) {
   const certBonus = (staff.hasCert && totalScheduleHours >= 120) ? 1000 : 0;
 
   return {
-    totalScheduleHours: Math.round(totalScheduleHours * 100) / 100,
-    adjustedTransitHours: Math.round(adjustedTransitHours * 100) / 100,
-    holidayTransitDeducted: Math.round(holidayTransitDeducted * 100) / 100,
-    certBonus: certBonus,
-    weekdayOvertime: Math.round(weekdayOvertime * 100) / 100,
-    restDay1_2: Math.round(restDay1_2 * 100) / 100,
-    restDay3_8: Math.round(restDay3_8 * 100) / 100,
-    satHours: Math.round(satHours * 100) / 100,
-    sunHours: Math.round(sunHours * 100) / 100,
-    holidayTotal: Math.round(holidayTotal * 100) / 100
-  };
+        totalScheduleHours: ceil2(totalScheduleHours),
+        adjustedTransitHours: ceil2(adjustedTransitHours),
+        holidayTransitDeducted: ceil2(holidayTransitDeducted),
+        certBonus: certBonus,
+        weekdayOvertime: ceil2(weekdayOvertime),
+        restDay1_2: ceil2(restDay1_2),
+        restDay3_8: ceil2(restDay3_8),
+        satHours: ceil2(satHours),
+        sunHours: ceil2(sunHours),
+        holidayTotal: ceil2(holidayTotal)
+      };
 }
 
 function exportResultExcel() {
